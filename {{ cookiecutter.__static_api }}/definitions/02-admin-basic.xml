@@ -1,0 +1,182 @@
+<AdminSettings transactionid="admin-settings-webadmin">
+  <WebAdminSettings>
+    <Certificate>ApplianceCertificate_v2</Certificate>
+    <HTTPSport>{{ cookiecutter.__xgs_tanker_port }}</HTTPSport>
+    <UserPortalHTTPSPort>4443</UserPortalHTTPSPort>
+    <VPNPortalHTTPSPort>443</VPNPortalHTTPSPort>
+    <PortalRedirectMode>ip</PortalRedirectMode>
+    <PortalCustomHostname/>
+  </WebAdminSettings>
+</AdminSettings>
+
+<AdminSettings transactionid="admin-settings-hostname">
+  <HostnameSettings>
+    <HostName>{{ cookiecutter.hostname }}</HostName>
+    <HostNameDesc/>
+  </HostnameSettings>
+</AdminSettings>
+
+<AdminSettings transactionid="admin-settings-login-security">
+  <LoginSecurity>
+    <LogoutSession>30</LogoutSession>
+    <BlockLogin>Enable</BlockLogin>
+    <BlockLoginSettings>
+      <UnsucccessfulAttempt>5</UnsucccessfulAttempt>
+      <Duration>60</Duration>
+      <ForMinutes>5</ForMinutes>
+    </BlockLoginSettings>
+  </LoginSecurity>
+  <PasswordComplexitySettings>
+    <PasswordComplexityCheck>Enable</PasswordComplexityCheck>
+    <PasswordComplexity>
+      <MinimumPasswordLength>Enable</MinimumPasswordLength>
+      <IncludeAlphabeticCharacters>Enable</IncludeAlphabeticCharacters>
+      <IncludeNumericCharacter>Enable</IncludeNumericCharacter>
+      <IncludeSpecialCharacter>Enable</IncludeSpecialCharacter>
+      <MinimumPasswordLengthValue>16</MinimumPasswordLengthValue>
+    </PasswordComplexity>
+  </PasswordComplexitySettings>
+</AdminSettings>
+
+<AdminSettings transactionid="admin-settings-login-complexity">
+  <PasswordComplexitySettings>
+    <PasswordComplexityCheck>Enable</PasswordComplexityCheck>
+    <PasswordComplexity>
+      <MinimumPasswordLength>Enable</MinimumPasswordLength>
+      <IncludeAlphabeticCharacters>Enable</IncludeAlphabeticCharacters>
+      <IncludeNumericCharacter>Enable</IncludeNumericCharacter>
+      <IncludeSpecialCharacter>Enable</IncludeSpecialCharacter>
+      <MinimumPasswordLengthValue>16</MinimumPasswordLengthValue>
+    </PasswordComplexity>
+  </PasswordComplexitySettings>
+</AdminSettings>
+
+<BackupRestore transactionid="admin-backup">
+  <ScheduleBackup>
+    <BackupMode>Mail</BackupMode>
+    <BackupPrefix>[XGS]</BackupPrefix>
+    <FtpPath/>
+    <Username/>
+    <FTPServer/>
+    <Password/>
+    <EmailAddress>{{ cookiecutter.email }}</EmailAddress>
+    <BackupFrequency>Weekly</BackupFrequency>
+    <Day>Sunday</Day>
+    <Hour>00</Hour>
+    <Minute>00</Minute>
+    <Date/>
+    <EncryptionPassword>{{ cookiecutter.encryption_password }}</EncryptionPassword>
+  </ScheduleBackup>
+</BackupRestore>
+
+<Notification transactionid="admin-notifications">
+  <SenderAddress>SophosXGS@{{ cookiecutter.domain }}</SenderAddress>
+  <NotificationServer>1</NotificationServer>
+  <AuthenticationRequired>Disable</AuthenticationRequired>
+  <Port>25</Port>
+  <ConnectionSecurity>None</ConnectionSecurity>
+  <Password/>
+  <MailServer>{{ cookiecutter.client_mail }}</MailServer>
+  <Recepient>{{ cookiecutter.email }}</Recepient>
+  <Username/>
+  <IPFamily>IPv4</IPFamily>
+</Notification>
+
+<Notificationlist transactionid="admin-notifications-settings">
+  <SendEmail>Enable</SendEmail>
+  <SendSnmp>Disable</SendSnmp>
+  <SignInEmail>Enable</SignInEmail>
+  <SignInSnmp>Disable</SignInSnmp>
+  <TooManyLoginEmail>Disable</TooManyLoginEmail>
+  <TooManyLoginSnmp>Disable</TooManyLoginSnmp>
+  <InterfaceEmail>Disable</InterfaceEmail>
+  <InterfaceSnmp>Disable</InterfaceSnmp>
+  <ApplianceUnpluggedEmail>Disable</ApplianceUnpluggedEmail>
+  <ApplianceUnpluggedSnmp>Disable</ApplianceUnpluggedSnmp>
+  <CriticalEmail>Enable</CriticalEmail>
+  <CriticalSnmp>Disable</CriticalSnmp>
+  <MajorEmail>Enable</MajorEmail>
+  <MajorSnmp>Disable</MajorSnmp>
+  <ModerateEmail>Disable</ModerateEmail>
+  <ModerateSnmp>Disable</ModerateSnmp>
+  <MinorEmail>Disable</MinorEmail>
+  <MinorSnmp>Disable</MinorSnmp>
+  <WarningEmail>Enable</WarningEmail>
+  <WarningSnmp>Disable</WarningSnmp>
+  <AlertATPEmail>Disable</AlertATPEmail>
+  <AlertATPSnmp>Disable</AlertATPSnmp>
+  <DropATPEmail>Disable</DropATPEmail>
+  <DropATPSnmp>Disable</DropATPSnmp>
+  <ConfDiskExdEmail>Disable</ConfDiskExdEmail>
+  <ConfDiskExdSnmp>Disable</ConfDiskExdSnmp>
+  <SigDiskExdEmail>Disable</SigDiskExdEmail>
+  <SigDiskExdSnmp>Disable</SigDiskExdSnmp>
+  <ReportDiskExdEmail>Disable</ReportDiskExdEmail>
+  <ReportDiskExdSnmp>Disable</ReportDiskExdSnmp>
+  <FirmwareReadyEmail>Enable</FirmwareReadyEmail>
+  <FirmwareReadySnmp>Enable</FirmwareReadySnmp>
+  <FirmwareInstalledEmail>Enable</FirmwareInstalledEmail>
+  <FirmwareInstalledSnmp>Disable</FirmwareInstalledSnmp>
+  <FirmwareInstalledFailedEmail>Enable</FirmwareInstalledFailedEmail>
+  <FirmwareInstalledFailedSnmp>Disable</FirmwareInstalledFailedSnmp>
+  <WebCatFailEmail>Disable</WebCatFailEmail>
+  <WebCatFailSnmp>Disable</WebCatFailSnmp>
+  <IPSSigFailEmail>Disable</IPSSigFailEmail>
+  <IPSSigFailSnmp>Disable</IPSSigFailSnmp>
+  <AVFailEmail>Disable</AVFailEmail>
+  <AVFailSnmp>Disable</AVFailSnmp>
+  <SystemStartEmail>Enable</SystemStartEmail>
+  <SystemStartSnmp>Disable</SystemStartSnmp>
+  <RedDownEmail>Enable</RedDownEmail>
+  <RedDownSnmp>Disable</RedDownSnmp>
+  <RedUpgradeFailEmail>Disable</RedUpgradeFailEmail>
+  <RedUpgradeFailSnmp>Disable</RedUpgradeFailSnmp>
+  <APOfflineEmail>Disable</APOfflineEmail>
+  <APOfflineSnmp>Disable</APOfflineSnmp>
+  <APUpgradeFailEmail>Disable</APUpgradeFailEmail>
+  <APUpgradeFailSnmp>Disable</APUpgradeFailSnmp>
+  <IPsecUPEmail>Disable</IPsecUPEmail>
+  <IPsecUPSnmp>Disable</IPsecUPSnmp>
+  <IPsecDownEmail>Disable</IPsecDownEmail>
+  <IPsecDownSnmp>Disable</IPsecDownSnmp>
+  <HighCpuEmail>Disable</HighCpuEmail>
+  <HighCpuSnmp>Disable</HighCpuSnmp>
+  <GwUnrcblEmail>Enable</GwUnrcblEmail>
+  <GwUnrcblSnmp>Disable</GwUnrcblSnmp>
+  <HttpVirusAlertEmail>Disable</HttpVirusAlertEmail>
+  <HttpVirusAlertSnmp>Disable</HttpVirusAlertSnmp>
+  <FtpVirusAlertEmail>Disable</FtpVirusAlertEmail>
+  <FtpVirusAlertSnmp>Disable</FtpVirusAlertSnmp>
+  <SmtpVirusAlertEmail>Disable</SmtpVirusAlertEmail>
+  <SmtpVirusAlertSnmp>Disable</SmtpVirusAlertSnmp>
+  <Pop3VirusAlertEmail>Disable</Pop3VirusAlertEmail>
+  <Pop3VirusAlertSnmp>Disable</Pop3VirusAlertSnmp>
+  <Imap4VirusAlertEmail>Disable</Imap4VirusAlertEmail>
+  <Imap4VirusAlertSnmp>Disable</Imap4VirusAlertSnmp>
+  <IPSecFailoverFailbackEmail>Disable</IPSecFailoverFailbackEmail>
+  <IPSecFailoverFailbackSnmp>Disable</IPSecFailoverFailbackSnmp>
+  <SSLVPNUPEmail>Disable</SSLVPNUPEmail>
+  <SSLVPNUPSnmp>Disable</SSLVPNUPSnmp>
+  <SSLVPNDownEmail>Disable</SSLVPNDownEmail>
+  <SSLVPNDownSnmp>Disable</SSLVPNDownSnmp>
+  <RedDeauthorizeEmail>Enable</RedDeauthorizeEmail>
+  <RedDeauthorizeSnmp>Disable</RedDeauthorizeSnmp>
+  <RedUnlockCodeEmail>Enable</RedUnlockCodeEmail>
+  <RedUnlockCodeSnmp>Disable</RedUnlockCodeSnmp>
+</Notificationlist>
+
+<Hotfix transactionid="admin-hotfix">
+  <AllowAutoInstallOfHotFixes>Enable</AllowAutoInstallOfHotFixes>
+</Hotfix>
+
+<Hotfix transactionid="admin-hotfix">
+  <AllowAutoInstallOfHotFixes>Enable</AllowAutoInstallOfHotFixes>
+</Hotfix>
+
+{% if cookiecutter.timezone %}
+<Time transactionid="admin-time">
+  <TimeZone>Europe/Berlin</TimeZone>
+  <PredefinedNTPServer>Enable</PredefinedNTPServer>
+  <SyncwithNTPServer>1</SyncwithNTPServer>
+</Time>
+{% endif %}

@@ -1,0 +1,547 @@
+<WebFilterException transactionid="webfilter-crl">
+  <Name>(GE) CA CRLs (RAUSYS)</Name>
+  <Desc>Allow Certificate Authority CRL query</Desc>
+  <Enabled>on</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*)?(\.eu|\.com)\/([A-Za-z0-9.\/-]*)(\.crl|\.crt)$</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-management">
+  <Name>(XE) Management + Hypervisor (RAUSYS)</Name>
+  <Desc>Management + Trusted Update URLs for Hypervisor + Management Networks</Desc>
+  <Enabled>off</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>yes</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <DstIp>16.250.72.103</DstIp>
+    <DstIp>15.249.24.136</DstIp>
+    <DstIp>16.248.72.93</DstIp>
+    <DstIp>15.249.152.105</DstIp>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?rausys\.de/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?microsoft\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?rau\.biz/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?qnap\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?debian\.org/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?veeam\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?ubuntu\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?.vmware.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?hpe\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?global\.synologydownload\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?nimblestorage\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?synology\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?windowsupdate\.com/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-rausys">
+  <Name>(GE) RAUSYS URLs</Name>
+  <Desc>RAUSYS Reporting + Management URLs</Desc>
+  <Enabled>on</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?rausys\.de/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?rau\.biz/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-sophos-provision">
+  <Name>(GE) Sophos Provisioning</Name>
+  <Desc>Sophos Endpoint Protection Provisioning</Desc>
+  <Enabled>on</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^downloads\.sophos\.com/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-updates-ubuntu">
+  <Name>(GE) Updates Ubuntu</Name>
+  <Desc>Ubuntu Management Updates incl. any application updates + installs</Desc>
+  <Enabled>off</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?debian\.org/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?ppa\.launchpad\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?ubuntu\.com/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-ubuntu-security">
+  <Name>(GE) Updates Ubuntu Security</Name>
+  <Desc>Ubuntu Security Updates Only</Desc>
+  <Enabled>on</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?security\.ubuntu\.com</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?security\.debian\.org</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-m365-entra-auth">
+  <Name>(AE) Microsoft Entra ID Auth</Name>
+  <Desc>Entra ID hybrid join and SSO (single-sign on) authentication against Azure Entra ID for clients</Desc>
+  <Enabled>on</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>yes</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^enterpriseregistration\.windows\.net/</URLRegex>
+    <URLRegex>^login\.microsoftonline\.de/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?login\.microsoftonline\.com/</URLRegex>
+    <URLRegex>^login\.live\.com/</URLRegex>
+    <URLRegex>^autologon\.microsoftazuread-sso\.com/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-m365-entra-connect">
+  <Name>(AE) Microsoft Entra Connect</Name>
+  <Desc>Entra Connect synchronization client (formerly known as AzureAD Connect)</Desc>
+  <Enabled>off</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>yes</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <SrcIp>{{ cookiecutter.entra_connect_host }}</SrcIp>
+    <URLRegex>^aadcdn\.msftauth\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?windows\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?adhybridhealth\.azure\.com/</URLRegex>
+    <URLRegex>^autologon\.microsoftazuread-sso\.com/</URLRegex>
+    <URLRegex>^www\.office\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?msappproxy\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?secure\.aadcdn\.microsoftonline-p\.com/</URLRegex>
+    <URLRegex>^policykeyservice.dc\.ad\.msft\.net/</URLRegex>
+    <URLRegex>^ocsp2?\.globalsign\.com/</URLRegex>
+    <URLRegex>^aadcdn\.msauth\.net/</URLRegex>
+    <URLRegex>^management\.azure\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?microsoftonline\.com/</URLRegex>
+    <URLRegex>^login\.microsoftonline\.de/</URLRegex>
+    <URLRegex>^login\.live\.com/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-m365-management">
+  <Name>(AE) M365 Management APIs</Name>
+  <Desc>PowerShell Connection to Azure &amp; M365 Management Services + Graph API</Desc>
+  <Enabled>off</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^aadcdn\.msftauth\.net/</URLRegex>
+    <URLRegex>^aadcdn\.msauth\.net/</URLRegex>
+    <URLRegex>^graph\.windows\.net/</URLRegex>
+    <URLRegex>^aadcdn\.msauthimages\.net/</URLRegex>
+    <URLRegex>^login\.microsoftonline\.com/</URLRegex>
+    <URLRegex>^login\.live\.com/</URLRegex>
+    <URLRegex>^outlook\.office365\.com/</URLRegex>
+    <URLRegex>^management\.azure\.com/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+<WebFilterException transactionid="webfilter-m365-teams">
+  <Name>(AE) Microsoft Office 365 - Teams</Name>
+  <Desc>Microsoft Office 365 functionality (Teams + Germany servers)</Desc>
+  <Enabled>off</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?adl\.windows\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?aka\.ms/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?amp\.azure\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?broadcast\.skype\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?compass-ssl\.microsoft\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?germeetings\.skype\.de/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?infra\.skype\.de/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?jax\.aspnetcdn\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?keydelivery\.mediaservices\.windows\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?lync\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?mlccdn\.blob\.core\.windows\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?mlccdnprod\.azureedge\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?msecnd\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?msedge\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?mstea\.ms/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?online\.skype\.de/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?resources\.skype\.de/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?secure\.skypeassets\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?sfbassets\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?skypeforbusiness\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?skypemaprdsitus\.trafficmanager\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?streaming\.mediaservices\.windows\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?teams\.microsoft\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?urlp\.sfbassets\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?videoplayercdn\.osi\.office\.net/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-m365-exo">
+  <Name>(AE) Microsoft Office 365 - EXO</Name>
+  <Desc>Microsoft Office 365 functionality (Exchange Online)</Desc>
+  <Enabled>off</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?outlook\.office365\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?res\.office365\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?outlook\.office\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?autodiscover-s\.outlook\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?autodiscover\.([A-Za-z0-9.-]*)</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?login\.microsoftonline\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?login\.live\.com/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-m365-cdn">
+  <Name>(AE) Microsoft Office 365 - Update CDN</Name>
+  <Desc>Microsoft Office 365 - Update URLs + CDN Whitelisting</Desc>
+  <Enabled>off</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?cdn\.office\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?office\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?office\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?officeapps\.live\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?officecdn\.microsoft\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?officecdn\.microsoft\.com\.edgekey\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?officecdn\.microsoft\.com\.edgesuite\.net/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-anydesk">
+  <Name>(AE) AnyDesk Clients</Name>
+  <Desc>AnyDesk client network access</Desc>
+  <Enabled>off</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?net\.anydesk\.com/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-docker">
+  <Name>(AE) Docker Host</Name>
+  <Desc>Docker Images Update + Container Pulls</Desc>
+  <Enabled>off</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?docker\.io/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?docker\.com/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-docker-advanced">
+  <Name>(AE) Docker Host Advanced + GitHub</Name>
+  <Desc>Advanced Docker Host allowing GitHub content + Vaultwarden</Desc>
+  <Enabled>off</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?raw\.githubusercontent\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?go\.btwrdn\.co/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?github-releases\.githubusercontent\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?\.docker\.io/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?github\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?production\.cloudflare\.docker\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?download\.docker\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?ghcr\.io/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+<WebFilterException transactionid="webfilter-letsencrypt">
+  <Name>(AE) LetsEncrypt Hosts</Name>
+  <Desc>LetsEncrypt Certificates for  Request + Renewal</Desc>
+  <Enabled>off</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?lencr\.org/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?letsencrypt\.org/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-mozilla">
+  <Name>(GE) Mozilla Updates</Name>
+  <Desc>Mozilla und Firefox Browser Updates</Desc>
+  <Enabled>on</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?download\.mozilla\.org/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?aus[0-9]?\.mozilla\.org/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?archive\.mozilla\.org/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?download-installer\.cdn\.mozilla\.net/</URLRegex>
+    <URLRegex>^download\.cdn\.mozilla\.net/.*\.mar</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-chrome">
+  <Name>(GE) Chrome Updates</Name>
+  <Desc>Google Chrome Browser Updates</Desc>
+  <Enabled>on</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^update\.googleapis\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]+\.google\.com\/)(([A-Za-z0-9.-\/]+)?)[0-9._]*chrome_(updater|installer)\.exe</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-adobe">
+  <Name>(GE) Adobe Updates</Name>
+  <Desc>Adobe Updates + application communication incl. Creative Cloud</Desc>
+  <Enabled>on</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?adobe\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?macromedia\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?adobe\.io/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?adobecc\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?adobeccstatic\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?adobegenuine\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?adobelogin\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?adobe\-services\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?typekit\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?typekit\.net/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?adobecces\.com/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-python">
+  <Name>(AE) Python Host</Name>
+  <Desc>Python Host + PIP Installations - no GitHub content</Desc>
+  <Enabled>off</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?pypi\.org/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?pypi\.python\.org/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?pythonhosted\.org/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-unifi">
+  <Name>(AE) UniFi Host</Name>
+  <Desc>Ubiquiti UniFi Network Controller Host</Desc>
+  <Enabled>off</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?dl\.ubnt\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?fw-download\.ubnt\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?fw-update\.ubnt\.com/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?repo\.mongodb\.org/</URLRegex>
+    <URLRegex>^([A-Za-z0-9.-]*\.)?ui\.com/</URLRegex>
+  </DomainList>
+</WebFilterException>
+
+
+<WebFilterException transactionid="webfilter-datev">
+  <Name>(AE) DATEV ASP</Name>
+  <Desc>DATEV ASP Connectivity</Desc>
+  <Enabled>off</Enabled>
+  <HttpsDecrypt>on</HttpsDecrypt>
+  <CertValidation>on</CertValidation>
+  <VirusScan>on</VirusScan>
+  <ZeroDayProtection>on</ZeroDayProtection>
+  <PolicyCheck>on</PolicyCheck>
+  <EnableSrcIP>no</EnableSrcIP>
+  <EnableDstIP>no</EnableDstIP>
+  <EnableURLRegex>yes</EnableURLRegex>
+  <EnableWebCat>no</EnableWebCat>
+  <IsDefault>no</IsDefault>
+  <DomainList>
+    <URLRegex>^map\.datevasp\.de/</URLRegex>
+  </DomainList>
+</WebFilterException>

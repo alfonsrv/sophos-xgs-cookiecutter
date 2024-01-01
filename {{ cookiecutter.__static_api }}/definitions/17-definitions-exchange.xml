@@ -1,0 +1,135 @@
+<IPHost transactionid="ip-outlook-1">
+  <Name>protection.outlook.com (13.107.128.0/22)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>13.107.128.0</IPAddress>
+  <Subnet>255.255.252.0</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-2">
+  <Name>protection.outlook.com (13.107.18.10/31)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>13.107.18.10</IPAddress>
+  <Subnet>255.255.255.254</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-3">
+  <Name>protection.outlook.com (13.107.6.152/31)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>13.107.6.152</IPAddress>
+  <Subnet>255.255.255.254</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-4">
+  <Name>protection.outlook.com (23.103.160.0/20)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>23.103.160.0</IPAddress>
+  <Subnet>255.255.240.0</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-5">
+  <Name>protection.outlook.com (40.92.0.0/15)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>40.92.0.0</IPAddress>
+  <Subnet>255.254.0.0</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-6">
+  <Name>protection.outlook.com (40.96.0.0/13)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>40.96.0.0</IPAddress>
+  <Subnet>255.248.0.0</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-7">
+  <Name>protection.outlook.com (40.104.0.0/15)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>40.104.0.0</IPAddress>
+  <Subnet>255.254.0.0</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-8">
+  <Name>protection.outlook.com (40.107.0.0/16)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>40.107.0.0</IPAddress>
+  <Subnet>255.255.0.0</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-9">
+  <Name>protection.outlook.com (52.96.0.0/14)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>52.96.0.0</IPAddress>
+  <Subnet>255.252.0.0</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-10">
+  <Name>protection.outlook.com (52.100.0.0/14)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>52.100.0.0</IPAddress>
+  <Subnet>255.252.0.0</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-11">
+  <Name>protection.outlook.com (52.238.78.88/32)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>52.238.78.88</IPAddress>
+  <Subnet>255.255.255.255</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-12">
+  <Name>protection.outlook.com (104.47.0.0/17)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>104.47.0.0</IPAddress>
+  <Subnet>255.255.128.0</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-13">
+  <Name>protection.outlook.com (132.245.0.0/16)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>132.245.0.0</IPAddress>
+  <Subnet>255.255.0.0</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-14">
+  <Name>protection.outlook.com (131.253.33.215/32)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>131.253.33.215</IPAddress>
+  <Subnet>255.255.255.255</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-15">
+  <Name>protection.outlook.com (150.171.32.0/22)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>150.171.32.0</IPAddress>
+  <Subnet>255.255.252.0</Subnet>
+</IPHost>
+<IPHost transactionid="ip-outlook-16">
+  <Name>protection.outlook.com (204.79.197.215/32)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>204.79.197.215</IPAddress>
+  <Subnet>255.255.255.255</Subnet>
+</IPHost>
+<IPHostGroup transactionid="ip-outlook-group">
+  <Name>Microsoft Exchange Online Subnets</Name>
+  <Description>Reference: https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide</Description>
+  <HostList>
+    <Host>protection.outlook.com (13.107.128.0/22)</Host>
+    <Host>protection.outlook.com (13.107.18.10/31)</Host>
+    <Host>protection.outlook.com (13.107.6.152/31)</Host>
+    <Host>protection.outlook.com (23.103.160.0/20)</Host>
+    <Host>protection.outlook.com (40.92.0.0/15)</Host>
+    <Host>protection.outlook.com (40.96.0.0/13)</Host>
+    <Host>protection.outlook.com (40.104.0.0/15)</Host>
+    <Host>protection.outlook.com (40.107.0.0/16)</Host>
+    <Host>protection.outlook.com (52.96.0.0/14)</Host>
+    <Host>protection.outlook.com (52.100.0.0/14)</Host>
+    <Host>protection.outlook.com (52.238.78.88/32)</Host>
+    <Host>protection.outlook.com (104.47.0.0/17)</Host>
+    <Host>protection.outlook.com (132.245.0.0/16)</Host>
+    <Host>protection.outlook.com (131.253.33.215/32)</Host>
+    <Host>protection.outlook.com (150.171.32.0/22)</Host>
+    <Host>protection.outlook.com (204.79.197.215/32)</Host>
+  </HostList>
+  <IPFamily>IPv4</IPFamily>
+</IPHostGroup>

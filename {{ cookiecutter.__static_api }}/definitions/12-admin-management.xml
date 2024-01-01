@@ -1,0 +1,20 @@
+<LocalServiceACL transactionid="admin-acl-management">
+  <RuleName>Management Port</RuleName>
+  <Description>Ensure traffic ALWAYS works from management port, even if ACLs are mis-configured. kappa</Description>
+  <Position>Top</Position>
+  <IPFamily>IPv4</IPFamily>
+  <SourceZone>MgmtPort</SourceZone>
+  <Hosts>
+    <Host>Network Class A (10.0.0.0-10.255.255.255)</Host>
+    <Host>Network Class B (172.16.0.0-172.31.255.255)</Host>
+    <Host>Network Class C (192.168.0.0-192.168.255.255)</Host>
+  </Hosts>
+  <Services>
+    <Service>HTTPS</Service>
+    <Service>SSH</Service>
+    <Service>Ping</Service>
+    <Service>UserPortal</Service>
+    <Service>VPNPortal</Service>
+  </Services>
+  <Action>accept</Action>
+</LocalServiceACL>

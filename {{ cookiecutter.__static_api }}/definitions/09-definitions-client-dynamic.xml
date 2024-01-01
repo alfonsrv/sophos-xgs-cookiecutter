@@ -1,0 +1,48 @@
+<IPHost transactionid="client-domain-controller">
+  <Name>{{ cookiecutter.domain_controller_name }}</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>IP</HostType>
+  <IPAddress>{{ cookiecutter.domain_controller_ip }}</IPAddress>
+</IPHost>
+
+<IPHostGroup transactionid="client-domain-controller-group">
+  <Name>Domain Controller</Name>
+  <Description>Active Directory Domain  Controllers</Description>
+  <HostList>
+    <Host>{{ cookiecutter.domain_controller_name }}</Host>
+  </HostList>
+  <IPFamily>IPv4</IPFamily>
+</IPHostGroup>
+
+<AuthenticationServer transactionid="client-auth-server">
+  <ActiveDirectory>
+    <ServerName>Domain Controller (AD DS)</ServerName>
+    <ServerAddress>{{ cookiecutter.domain_controller_ip }}</ServerAddress>
+    <Port>636</Port>
+    <NetBIOSDomain>{{ cookiecutter.domain_controller_netbios }}</NetBIOSDomain>
+    <ADSUsername>{{ cookiecutter.auth_service_name }}</ADSUsername>
+    <Password>{{ cookiecutter.auth_service_password }}</Password>
+    <ConnectionSecurity>SSL</ConnectionSecurity>
+    <ValidCertReq>Enable</ValidCertReq>
+    <DisplayNameAttribute>displayName</DisplayNameAttribute>
+    <EmailAddressAttribute>mail</EmailAddressAttribute>
+    <DomainName>{{ cookiecutter.domain_controller_domain }}</DomainName>
+    <SearchQueries>
+      <Query>{{ cookiecutter.__domain_controller_domain_descriptor }}</Query>
+    </SearchQueries>
+  </ActiveDirectory>
+</AuthenticationServer>
+
+<DNSRequestRoute transactionid="client-dns-request-route">
+  <DomainName>{{ cookiecutter.domain_controller_domain }}</DomainName>
+  <TargetServers>
+    <Host>{{ cookiecutter.domain_controller_name }}</Host>
+  </TargetServers>
+</DNSRequestRoute>
+
+<IPHost transactionid="client-print-server">
+  <Name>{{ cookiecutter.print_server_name }}</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>IP</HostType>
+  <IPAddress>{{ cookiecutter.print_server_ip }}</IPAddress>
+</IPHost>

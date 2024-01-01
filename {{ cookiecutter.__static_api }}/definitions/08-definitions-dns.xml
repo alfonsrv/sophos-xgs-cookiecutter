@@ -1,0 +1,75 @@
+<IPHost transactionid="ip-dns-cloudflare4">
+  <Name>DNS Cloudflare</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>IP</HostType>
+  <IPAddress>1.1.1.1</IPAddress>
+</IPHost>
+<IPHost transactionid="ip-dns-google4">
+  <Name>DNS Google</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>IP</HostType>
+  <IPAddress>8.8.8.8</IPAddress>
+</IPHost>
+<IPHost transactionid="ip-dns-cloudflare6">
+  <Name>DNS Cloudflare IPv6</Name>
+  <IPFamily>IPv6</IPFamily>
+  <HostType>IP</HostType>
+  <IPAddress>2606:4700:4700::1111</IPAddress>
+</IPHost>
+<IPHost transactionid="ip-dns-google6">
+  <Name>DNS Google IPv6</Name>
+  <IPFamily>IPv6</IPFamily>
+  <HostType>IP</HostType>
+  <IPAddress>2001:4860:4860::8888</IPAddress>
+</IPHost>
+<IPHost transactionid="ip-dns-cloudflarex4">
+  <Name>DNS Cloudflare Anti-Malware</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>IP</HostType>
+  <IPAddress>1.1.1.2</IPAddress>
+</IPHost>
+<IPHost transactionid="ip-dns-cloudflarex6">
+  <Name>DNS Cloudflare Anti-Malware IPv6</Name>
+  <IPFamily>IPv6</IPFamily>
+  <HostType>IP</HostType>
+  <IPAddress>2606:4700:4700::1112</IPAddress>
+</IPHost>
+<IPHostGroup transactionid="ip-dns-group4">
+  <Name>DNS (Cloudflare + Google)</Name>
+  <Description/>
+  <HostList>
+    <Host>DNS Cloudflare</Host>
+    <Host>DNS Google</Host>
+  </HostList>
+  <IPFamily>IPv4</IPFamily>
+</IPHostGroup>
+
+<IPHostGroup transactionid="ip-dns-group6">
+  <Name>DNS (Cloudflare + Google) IPv6</Name>
+  <Description/>
+  <HostList>
+    <Host>DNS Cloudflare IPv6</Host>
+    <Host>DNS Google IPv6</Host>
+  </HostList>
+  <IPFamily>IPv6</IPFamily>
+</IPHostGroup>
+
+<DNS transactionid="dns-config">
+  <IPv4Settings>
+    <ObtainDNSFrom>Static</ObtainDNSFrom>
+    <DNSIPList>
+      <DNS1>1.1.1.1</DNS1>
+      <DNS2>8.8.8.8</DNS2>
+      <DNS3>127.0.0.1</DNS3>
+    </DNSIPList>
+  </IPv4Settings>
+  <IPv6Settings>
+    <ObtainDNSFrom>Static</ObtainDNSFrom>
+    <DNSIPList>
+      <DNS1>2606:4700:4700::1111</DNS1>
+      <DNS2>2606:4700:4700::1001</DNS2>
+      <DNS3/>
+    </DNSIPList>
+  </IPv6Settings>
+  <DNSQueryConfiguration>ChooseIPv4DNSServerOverIPv6</DNSQueryConfiguration>
+</DNS>

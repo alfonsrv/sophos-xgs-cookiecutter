@@ -1,0 +1,135 @@
+<Zone transactionid="zone-lan">
+  <Name>LAN</Name>
+  <Type>LAN</Type>
+  <Description>DO NOT USE</Description>
+  <ApplianceAccess>
+    <NetworkServices>
+      <DNS>Enable</DNS>
+      <Ping>Enable</Ping>
+    </NetworkServices>
+    <OtherServices>
+      <WebProxy>Enable</WebProxy>
+      <VPNPortal>Enable</VPNPortal>
+    </OtherServices>
+  </ApplianceAccess>
+</Zone>
+<Zone transactionid="zone-wan">
+  <Name>WAN</Name>
+  <Type>WAN</Type>
+  <Description/>
+</Zone>
+<Zone transactionid="zone-dmz">
+  <Name>DMZ</Name>
+  <Type>DMZ</Type>
+  <Description/>
+</Zone>
+<Zone transactionid="zone-vpn">
+  <Name>VPN</Name>
+  <Type>VPN</Type>
+  <Description/>
+</Zone>
+<Zone transactionid="zone-wifi">
+  <Name>WiFi</Name>
+  <Type>LAN</Type>
+  <Description>Intranet WiFi</Description>
+  <ApplianceAccess>
+    <NetworkServices>
+      <DNS>Enable</DNS>
+      <Ping>Enable</Ping>
+    </NetworkServices>
+    <OtherServices>
+      <WebProxy>Enable</WebProxy>
+      <!--SSLVPN>Enable</SSLVPN-->
+    </OtherServices>
+  </ApplianceAccess>
+</Zone>
+<Zone transactionid="zone-management">
+  <Name>Management</Name>
+  <Type>LAN</Type>
+  <Description>Hyper-V and Management network</Description>
+  <ApplianceAccess>
+    <AdminServices>
+      <HTTPS>Enable</HTTPS>
+      <SSH>Enable</SSH>
+    </AdminServices>
+    <NetworkServices>
+      <DNS>Enable</DNS>
+      <Ping>Enable</Ping>
+    </NetworkServices>
+    <OtherServices>
+      <WebProxy>Enable</WebProxy>
+      <UserPortal>Enable</UserPortal>
+      <VPNPortal>Enable</VPNPortal>
+      <SNMP>Enable</SNMP>
+    </OtherServices>
+  </ApplianceAccess>
+</Zone>
+<Zone transactionid="zone-wifi-guest">
+  <Name>WiFi_Guest</Name>
+  <Type>LAN</Type>
+  <Description>Guest WLAN</Description>
+</Zone>
+<Zone transactionid="zone-clients">
+  <Name>Clients</Name>
+  <Type>LAN</Type>
+  <Description>Clients + Peripherie</Description>
+  <ApplianceAccess>
+    <NetworkServices>
+      <DNS>Enable</DNS>
+      <Ping>Enable</Ping>
+    </NetworkServices>
+    <OtherServices>
+      <WebProxy>Enable</WebProxy>
+      <VPNPortal>Enable</VPNPortal>
+    </OtherServices>
+  </ApplianceAccess>
+</Zone>
+<Zone transactionid="zone-server">
+  <Name>Server</Name>
+  <Type>LAN</Type>
+  <Description>Server + Internal Services</Description>
+  <ApplianceAccess>
+    <NetworkServices>
+      <DNS>Enable</DNS>
+      <Ping>Enable</Ping>
+    </NetworkServices>
+    <OtherServices>
+      <WebProxy>Enable</WebProxy>
+    </OtherServices>
+  </ApplianceAccess>
+</Zone>
+<Zone transactionid="zone-voip">
+  <Name>VoIP</Name>
+  <Type>LAN</Type>
+  <Description>VoIP, Telefonie + DECT</Description>
+  <ApplianceAccess>
+    <NetworkServices>
+      <DNS>Enable</DNS>
+      <Ping>Enable</Ping>
+    </NetworkServices>
+    <OtherServices>
+      <WebProxy>Enable</WebProxy>
+    </OtherServices>
+  </ApplianceAccess>
+</Zone>
+<Zone transactionid="zone-mgmt">
+  <Name>MgmtPort</Name>
+  <Type>LAN</Type>
+  <Description>Management-Port Access Configuration</Description>
+  <ApplianceAccess>
+    <AdminServices>
+      <HTTPS>Enable</HTTPS>
+      <SSH>Enable</SSH>
+    </AdminServices>
+    <NetworkServices>
+      <DNS>Enable</DNS>
+      <Ping>Enable</Ping>
+    </NetworkServices>
+    <OtherServices>
+      <WebProxy>Enable</WebProxy>
+      <UserPortal>Enable</UserPortal>
+      <VPNPortal>Enable</VPNPortal>
+      <SNMP>Enable</SNMP>
+    </OtherServices>
+  </ApplianceAccess>
+</Zone>

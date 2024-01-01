@@ -1,0 +1,35 @@
+{% if cookiecutter.dhcp_server == "relay" %}
+
+<DHCPRelay transactionid="dhcp-relay">
+  <Name>DC_Relay</Name>
+  <IPFamily>IPv4</IPFamily>
+  <Interface>{% if cookiecutter.interface_config %}lag1{% endif %}</Interface>
+  <DHCPServerIP>{{ cookiecutter.domain_controller_ip }}</DHCPServerIP>
+  <RelaythroughIPSec>Enable</RelaythroughIPSec>
+</DHCPRelay>
+
+{% elif cookiecutter.dhcp_server == "xgs" %}
+
+<DHCPServer transactionid="dhcp-server">
+  <Name>VLAN_1</Name>
+  <Status>1</Status>
+  <Interface>{% if cookiecutter.interface_config %}lag1{% endif %}</Interface>
+  <IPLease>
+      <IP>{{ cookiecutter.__network_address_scope }}</IP>
+  </IPLease>
+  <ConflictDetection>Enable</ConflictDetection>
+  <LeaseForRelay>Enable</LeaseForRelay>
+  <SubnetMask>{{ cookiecutter.network_subnet }}</SubnetMask>
+  <DomainName>{{ cookiecutter.domain_controller_domain }}</DomainName>
+  <DefaultLeaseTime>1440</DefaultLeaseTime>
+  <MaxLeaseTime>2880</MaxLeaseTime>
+  <UseApplianceDNSSettings>Disable</UseApplianceDNSSettings>
+  <PrimaryDNSServer>{{ cookiecutter.domain_controller_ip }}</PrimaryDNSServer>
+  <SecondaryDNSServer>{{ cookiecutter.network_address }}</SecondaryDNSServer>
+  <PrimaryWINSServer>{{ cookiecutter.domain_controller_ip }}</PrimaryWINSServer>
+  <SecondaryWINSServer></SecondaryWINSServer>
+  <Gateway>{{ cookiecutter.network_address }}</Gateway>
+  <UseInterfaceIPasGateway>ANY</UseInterfaceIPasGateway>
+</DHCPServer>
+
+{% endif %}

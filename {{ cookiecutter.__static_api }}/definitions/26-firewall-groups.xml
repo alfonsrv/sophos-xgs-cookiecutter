@@ -1,0 +1,83 @@
+<FirewallRuleGroup transactionid="firewall-group-management">
+  <Name>Management</Name>
+  <Description>Hypervisor und Management Services – zur grundsätzlichen Sicherstellung der Infrastruktur-Funktionalität. Zugriff innerhalb geschützter Netzwerke.</Description>
+  <SecurityPolicyList>
+    <SecurityPolicy>Management Network</SecurityPolicy>
+    <SecurityPolicy>Management SMTP</SecurityPolicy>
+  </SecurityPolicyList>
+  <SourceZones>
+    <Zone>Management</Zone>
+  </SourceZones>
+  <Policytype>Network rule</Policytype>
+</FirewallRuleGroup>
+
+<FirewallRuleGroup transactionid="firewall-group-infrastructure">
+  <Name>Infrastructure</Name>
+  <Description>Allgemeine Kommunikation der Infrastruktur zur Bereitstellung der internen Services, wie Domain Controller, Dateiserver, Drucken, ...</Description>
+  <SecurityPolicyList>
+    <SecurityPolicy>DC Comms</SecurityPolicy>
+    <SecurityPolicy>Printserver Client Comms</SecurityPolicy>
+    <SecurityPolicy>Printserver Printer Comms</SecurityPolicy>
+  </SecurityPolicyList>
+  <SourceZones>
+    <Zone>WiFi</Zone>
+    <Zone>Clients</Zone>
+    <Zone>Server</Zone>
+    <Zone>VoIP</Zone>
+  </SourceZones>
+  <DestinationZones>
+    <Zone>WiFi</Zone>
+    <Zone>Clients</Zone>
+    <Zone>Server</Zone>
+    <Zone>VoIP</Zone>
+  </DestinationZones>
+  <Policytype>Network rule</Policytype>
+</FirewallRuleGroup>
+
+<FirewallRuleGroup transactionid="firewall-group-dmz">
+  <Name>Incoming + DMZ</Name>
+  <Description>Extern eingehender Verkehr gegenüber internen Diensten, wie DMZ-Servern, Telefonanlagen, ...</Description>
+  <SecurityPolicyList>
+    <!--SecurityPolicy>[example] Traffic to DMZ</SecurityPolicy-->
+  </SecurityPolicyList>
+  <SourceZones>
+    <Zone>WAN</Zone>
+  </SourceZones>
+  <DestinationZones>
+    <Zone>LAN</Zone>
+    <Zone>DMZ</Zone>
+    <Zone>WiFi</Zone>
+    <Zone>Server</Zone>
+    <Zone>VoIP</Zone>
+    <Zone>Management</Zone>
+  </DestinationZones>
+  <Policytype>Any</Policytype>
+</FirewallRuleGroup>
+
+<FirewallRuleGroup transactionid="firewall-group-vpn">
+  <Name>VPN</Name>
+  <Description>SSL VPN access rules</Description>
+  <SecurityPolicyList>
+    <SecurityPolicy>DC Comms VPN</SecurityPolicy>
+    <SecurityPolicy>Printserver VPN Comms</SecurityPolicy>
+  </SecurityPolicyList>
+  <SourceZones>
+    <Zone>VPN</Zone>
+  </SourceZones>
+  <Policytype>User/network rule</Policytype>
+</FirewallRuleGroup>
+
+<FirewallRuleGroup transactionid="firewall-group-wan">
+  <Name>External WAN</Name>
+  <Description>Outbound traffic to WAN. Firewall rules with the destination zone as WAN would be added to this group on the first match basis if user selects automatic grouping option. This is the default group.</Description>
+  <SecurityPolicyList>
+    <SecurityPolicy>Client Surfing</SecurityPolicy>
+    <SecurityPolicy>Microsoft Teams</SecurityPolicy>
+    <SecurityPolicy>GUEST Surfing</SecurityPolicy>
+    <SecurityPolicy>NTP Service Simulation</SecurityPolicy>
+  </SecurityPolicyList>
+  <DestinationZones>
+    <Zone>WAN</Zone>
+  </DestinationZones>
+  <Policytype>Any</Policytype>
+</FirewallRuleGroup>

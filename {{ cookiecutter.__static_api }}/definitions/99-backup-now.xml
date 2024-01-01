@@ -1,0 +1,5 @@
+ <BackupRestore_Now transactionid="backup-instantly">
+  <ScheduleBackup>
+    <BackupMode>Mail</BackupMode>
+  </ScheduleBackup>
+</BackupRestore_Now>

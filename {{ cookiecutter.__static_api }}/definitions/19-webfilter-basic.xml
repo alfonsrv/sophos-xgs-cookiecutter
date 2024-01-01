@@ -1,0 +1,24 @@
+<WebFilterSettings transactionid="webfilter-settings-basic">
+  <WebCaching>Disable</WebCaching>
+  <Scanning>Single Anti-Virus (Maximum Performance)</Scanning>
+  <BlockUnscannableContent>Block (Best Protection)</BlockUnscannableContent>
+  <PharmingProtection>Enable</PharmingProtection>
+  <OverrideDefaultWarnedMessage>Disable</OverrideDefaultWarnedMessage>
+  <OverrideDefaultDeniedMessage>Disable</OverrideDefaultDeniedMessage>
+  <DeniedMessageImage>Default</DeniedMessageImage>
+</WebFilterSettings>
+
+<WebFilterProtectionSettings transactionid="webfilter-settings-protection">
+  <FTPFileSizeThreshold>30720</FTPFileSizeThreshold>
+  <ScanMode>BatchMode</ScanMode>
+  <FileSizeThreshold>140288</FileSizeThreshold>
+  <AudioVideoFileScanning>Disable</AudioVideoFileScanning>
+  <HTTPSScanningCA>Default</HTTPSScanningCA>
+  <DenyUnknownProtocol>Enable</DenyUnknownProtocol>
+  <AllowInvalidCertificate>Disable</AllowInvalidCertificate>
+  <NoHttpsNotification>Enable</NoHttpsNotification>
+  <Scanning>Single Anti-Virus (Maximum Performance)</Scanning>
+  <BlockUnscannableContent>Block (Best Protection)</BlockUnscannableContent>
+  <PharmingProtection>Enable</PharmingProtection>
+  <PUADetection>Disable</PUADetection>
+</WebFilterProtectionSettings>

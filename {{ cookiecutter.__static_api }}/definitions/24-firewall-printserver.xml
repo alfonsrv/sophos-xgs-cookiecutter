@@ -1,0 +1,158 @@
+<FirewallRule transactionid="firewall-printserver-clients">
+  <Name>Printserver Client Comms</Name>
+  <Description>Clients zu Druckserver-Kommunikation</Description>
+  <IPFamily>IPv4</IPFamily>
+  <Status>Enable</Status>
+  <Position>After</Position>
+  <PolicyType>Network</PolicyType>
+  <After>
+    <Name>DC Comms VPN</Name>
+  </After>
+  <NetworkPolicy>
+    <Action>Accept</Action>
+    <LogTraffic>Disable</LogTraffic>
+    <SkipLocalDestined>Disable</SkipLocalDestined>
+    <SourceZones>
+      <Zone>LAN</Zone>
+      <Zone>VPN</Zone>
+      <Zone>Clients</Zone>
+      <Zone>Server</Zone>
+    </SourceZones>
+    <DestinationZones>
+      <Zone>Server</Zone>
+    </DestinationZones>
+    <Schedule>All The Time</Schedule>
+    <Services>
+      <Service>Network Printing</Service>
+    </Services>
+    <DestinationNetworks>
+      <Network>{{ cookiecutter.print_server_name }}</Network>
+    </DestinationNetworks>
+    <DSCPMarking>-1</DSCPMarking>
+    <WebFilter>None</WebFilter>
+    <WebCategoryBaseQoSPolicy> </WebCategoryBaseQoSPolicy>
+    <BlockQuickQuic>Disable</BlockQuickQuic>
+    <ScanVirus>Disable</ScanVirus>
+    <ZeroDayProtection>Disable</ZeroDayProtection>
+    <ProxyMode>Disable</ProxyMode>
+    <DecryptHTTPS>Disable</DecryptHTTPS>
+    <ApplicationControl>None</ApplicationControl>
+    <ApplicationBaseQoSPolicy> </ApplicationBaseQoSPolicy>
+    <IntrusionPrevention>None</IntrusionPrevention>
+    <TrafficShappingPolicy>None</TrafficShappingPolicy>
+    <ScanSMTP>Disable</ScanSMTP>
+    <ScanSMTPS>Disable</ScanSMTPS>
+    <ScanIMAP>Disable</ScanIMAP>
+    <ScanIMAPS>Disable</ScanIMAPS>
+    <ScanPOP3>Disable</ScanPOP3>
+    <ScanPOP3S>Disable</ScanPOP3S>
+    <ScanFTP>Disable</ScanFTP>
+    <SourceSecurityHeartbeat>Disable</SourceSecurityHeartbeat>
+    <MinimumSourceHBPermitted>YELLOW</MinimumSourceHBPermitted>
+    <DestSecurityHeartbeat>Disable</DestSecurityHeartbeat>
+    <MinimumDestinationHBPermitted>No Restriction</MinimumDestinationHBPermitted>
+  </NetworkPolicy>
+</FirewallRule>
+
+<FirewallRule transactionid="firewall-printserver-printer">
+  <Name>Printserver Printer Comms</Name>
+  <Description>Druckserver zu Drucker-Kommunikation</Description>
+  <IPFamily>IPv4</IPFamily>
+  <Status>Enable</Status>
+  <Position>After</Position>
+  <PolicyType>Network</PolicyType>
+  <After>
+    <Name>Printserver Client Comms</Name>
+  </After>
+  <NetworkPolicy>
+    <Action>Accept</Action>
+    <LogTraffic>Disable</LogTraffic>
+    <SkipLocalDestined>Disable</SkipLocalDestined>
+    <SourceZones>
+      <Zone>Server</Zone>
+    </SourceZones>
+    <Schedule>All The Time</Schedule>
+    <SourceNetworks>
+      <Network>{{ cookiecutter.print_server_name }}</Network>
+    </SourceNetworks>
+    <Services>
+      <Service>Network Printing</Service>
+    </Services>
+    <DSCPMarking>-1</DSCPMarking>
+    <WebFilter>None</WebFilter>
+    <WebCategoryBaseQoSPolicy> </WebCategoryBaseQoSPolicy>
+    <BlockQuickQuic>Disable</BlockQuickQuic>
+    <ScanVirus>Disable</ScanVirus>
+    <ZeroDayProtection>Disable</ZeroDayProtection>
+    <ProxyMode>Disable</ProxyMode>
+    <DecryptHTTPS>Disable</DecryptHTTPS>
+    <ApplicationControl>None</ApplicationControl>
+    <ApplicationBaseQoSPolicy> </ApplicationBaseQoSPolicy>
+    <IntrusionPrevention>None</IntrusionPrevention>
+    <TrafficShappingPolicy>None</TrafficShappingPolicy>
+    <ScanSMTP>Disable</ScanSMTP>
+    <ScanSMTPS>Disable</ScanSMTPS>
+    <ScanIMAP>Disable</ScanIMAP>
+    <ScanIMAPS>Disable</ScanIMAPS>
+    <ScanPOP3>Disable</ScanPOP3>
+    <ScanPOP3S>Disable</ScanPOP3S>
+    <ScanFTP>Disable</ScanFTP>
+    <SourceSecurityHeartbeat>Disable</SourceSecurityHeartbeat>
+    <MinimumSourceHBPermitted>No Restriction</MinimumSourceHBPermitted>
+    <DestSecurityHeartbeat>Disable</DestSecurityHeartbeat>
+    <MinimumDestinationHBPermitted>No Restriction</MinimumDestinationHBPermitted>
+  </NetworkPolicy>
+</FirewallRule>
+
+<FirewallRule transactionid="firewall-printserver-vpn">
+  <Name>Printserver VPN Comms</Name>
+  <Description>Clients via VPN zu Druckserver-Kommunikation</Description>
+  <IPFamily>IPv4</IPFamily>
+  <Status>Enable</Status>
+  <Position>After</Position>
+  <PolicyType>Network</PolicyType>
+  <After>
+    <Name>Printserver Printer Comms</Name>
+  </After>
+  <NetworkPolicy>
+    <Action>Accept</Action>
+    <LogTraffic>Disable</LogTraffic>
+    <SkipLocalDestined>Disable</SkipLocalDestined>
+    <SourceZones>
+      <Zone>VPN</Zone>
+    </SourceZones>
+    <DestinationZones>
+      <Zone>Server</Zone>
+    </DestinationZones>
+    <Schedule>All The Time</Schedule>
+    <Services>
+      <Service>Network Printing</Service>
+    </Services>
+    <DestinationNetworks>
+      <Network>{{ cookiecutter.print_server_name }}</Network>
+    </DestinationNetworks>
+    <DSCPMarking>-1</DSCPMarking>
+    <WebFilter>None</WebFilter>
+    <WebCategoryBaseQoSPolicy> </WebCategoryBaseQoSPolicy>
+    <BlockQuickQuic>Disable</BlockQuickQuic>
+    <ScanVirus>Disable</ScanVirus>
+    <ZeroDayProtection>Disable</ZeroDayProtection>
+    <ProxyMode>Disable</ProxyMode>
+    <DecryptHTTPS>Disable</DecryptHTTPS>
+    <ApplicationControl>None</ApplicationControl>
+    <ApplicationBaseQoSPolicy> </ApplicationBaseQoSPolicy>
+    <IntrusionPrevention>None</IntrusionPrevention>
+    <TrafficShappingPolicy>None</TrafficShappingPolicy>
+    <ScanSMTP>Disable</ScanSMTP>
+    <ScanSMTPS>Disable</ScanSMTPS>
+    <ScanIMAP>Disable</ScanIMAP>
+    <ScanIMAPS>Disable</ScanIMAPS>
+    <ScanPOP3>Disable</ScanPOP3>
+    <ScanPOP3S>Disable</ScanPOP3S>
+    <ScanFTP>Disable</ScanFTP>
+    <SourceSecurityHeartbeat>Disable</SourceSecurityHeartbeat>
+    <MinimumSourceHBPermitted>YELLOW</MinimumSourceHBPermitted>
+    <DestSecurityHeartbeat>Disable</DestSecurityHeartbeat>
+    <MinimumDestinationHBPermitted>No Restriction</MinimumDestinationHBPermitted>
+  </NetworkPolicy>
+</FirewallRule>

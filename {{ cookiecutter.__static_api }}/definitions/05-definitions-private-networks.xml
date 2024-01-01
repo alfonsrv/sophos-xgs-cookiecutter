@@ -1,0 +1,29 @@
+<IPHost transactionid="network-a">
+  <Name>Network Class A (10.0.0.0-10.255.255.255)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>IPRange</HostType>
+  <StartIPAddress>10.0.0.0</StartIPAddress>
+  <EndIPAddress>10.255.255.255</EndIPAddress>
+</IPHost>
+<IPHost transactionid="network-b">
+  <Name>Network Class B (172.16.0.0-172.31.255.255)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>IPRange</HostType>
+  <StartIPAddress>172.16.0.0</StartIPAddress>
+  <EndIPAddress>172.31.255.255</EndIPAddress>
+</IPHost>
+<IPHost transactionid="network-c">
+  <Name>Network Class C (192.168.0.0-192.168.255.255)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>IPRange</HostType>
+  <StartIPAddress>192.168.0.0</StartIPAddress>
+  <EndIPAddress>192.168.255.255</EndIPAddress>
+</IPHost>
+
+<IPHostGroup transactionid="network-lan">
+  <Name>Local Networks</Name>
+  <Description>Internal Class A-B Networks</Description>
+  <HostList>^
+  </HostList>
+  <IPFamily>IPv4</IPFamily>
+</IPHostGroup>

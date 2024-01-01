@@ -1,0 +1,85 @@
+
+<IPHost transactionid="teams-network-1">
+  <Name>Microsoft Teams (13.107.64.0/18)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>13.107.64.0</IPAddress>
+  <Subnet>255.255.192.0</Subnet>
+</IPHost>
+<IPHost transactionid="teams-network-2">
+  <Name>Microsoft Teams (52.112.0.0/14)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>52.112.0.0</IPAddress>
+  <Subnet>255.252.0.0</Subnet>
+</IPHost>
+<IPHost transactionid="teams-network-3">
+  <Name>Microsoft Teams (52.122.0.0/15)</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>52.122.0.0</IPAddress>
+  <Subnet>255.254.0.0</Subnet>
+</IPHost>
+<IPHostGroup transactionid="teams-network-group">
+  <Name>Microsoft Teams</Name>
+  <Description/>
+  <HostList>
+    <Host>Microsoft Teams (13.107.64.0/18)</Host>
+    <Host>Microsoft Teams (52.112.0.0/14)</Host>
+    <Host>Microsoft Teams (52.122.0.0/15)</Host>
+  </HostList>
+  <IPFamily>IPv4</IPFamily>
+</IPHostGroup>
+
+<FirewallRule transactionid="teams-rule">
+  <Name>Microsoft Teams</Name>
+  <Description>Teams Audio Media Ports + Meeting Ports</Description>
+  <IPFamily>IPv4</IPFamily>
+  <Status>Enable</Status>
+  <Position>Top</Position>
+  <PolicyType>Network</PolicyType>
+  <NetworkPolicy>
+    <Action>Accept</Action>
+    <LogTraffic>Disable</LogTraffic>
+    <SkipLocalDestined>Disable</SkipLocalDestined>
+    <SourceZones>
+      <Zone>Clients</Zone>
+    </SourceZones>
+    <DestinationZones>
+      <Zone>WAN</Zone>
+    </DestinationZones>
+    <Schedule>All The Time</Schedule>
+    <Services>
+      <Service>Teams RTP</Service>
+      <Service>Teams Meetings</Service>
+    </Services>
+    <DestinationNetworks>
+      <Network>Microsoft Teams (13.107.64.0/18)</Network>
+      <Network>Microsoft Teams (52.112.0.0/14)</Network>
+      <Network>Microsoft Teams (52.122.0.0/15)</Network>
+    </DestinationNetworks>
+    <DSCPMarking>-1</DSCPMarking>
+    <WebFilter>None</WebFilter>
+    <WebCategoryBaseQoSPolicy> </WebCategoryBaseQoSPolicy>
+    <BlockQuickQuic>Disable</BlockQuickQuic>
+    <ScanVirus>Disable</ScanVirus>
+    <ZeroDayProtection>Disable</ZeroDayProtection>
+    <ProxyMode>Disable</ProxyMode>
+    <DecryptHTTPS>Disable</DecryptHTTPS>
+    <ApplicationControl>None</ApplicationControl>
+    <ApplicationBaseQoSPolicy> </ApplicationBaseQoSPolicy>
+    <IntrusionPrevention>None</IntrusionPrevention>
+    <TrafficShappingPolicy>VoIP Guarantee</TrafficShappingPolicy>
+    <ScanSMTP>Disable</ScanSMTP>
+    <ScanSMTPS>Disable</ScanSMTPS>
+    <ScanIMAP>Disable</ScanIMAP>
+    <ScanIMAPS>Disable</ScanIMAPS>
+    <ScanPOP3>Disable</ScanPOP3>
+    <ScanPOP3S>Disable</ScanPOP3S>
+    <ScanFTP>Disable</ScanFTP>
+    <SourceSecurityHeartbeat>Disable</SourceSecurityHeartbeat>
+    <MinimumSourceHBPermitted>No Restriction</MinimumSourceHBPermitted>
+    <DestSecurityHeartbeat>Disable</DestSecurityHeartbeat>
+    <MinimumDestinationHBPermitted>No Restriction</MinimumDestinationHBPermitted>
+  </NetworkPolicy>
+</FirewallRule>

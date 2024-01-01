@@ -1,0 +1,109 @@
+<FirewallRule transactionid="firewall-domain-controller">
+  <Name>DC Comms</Name>
+  <Description>Active Directory-Kommunikation</Description>
+  <IPFamily>IPv4</IPFamily>
+  <Status>Enable</Status>
+  <Position>After</Position>
+  <PolicyType>Network</PolicyType>
+  <After>
+    <Name>Management SMTP</Name>
+  </After>
+  <NetworkPolicy>
+    <Action>Accept</Action>
+    <LogTraffic>Disable</LogTraffic>
+    <SkipLocalDestined>Disable</SkipLocalDestined>
+    <SourceZones>
+      <Zone>Clients</Zone>
+      <Zone>Server</Zone>
+      <Zone>LAN</Zone>
+    </SourceZones>
+    <DestinationZones>
+      <Zone>Server</Zone>
+    </DestinationZones>
+    <Schedule>All The Time</Schedule>
+    <Services>
+      <Service>DNS</Service>
+      <Service>Active Directory (kein DNS)</Service>
+    </Services>
+    <DestinationNetworks>
+      <Network>Domain Controller</Network>
+    </DestinationNetworks>
+    <DSCPMarking>-1</DSCPMarking>
+    <WebFilter>None</WebFilter>
+    <WebCategoryBaseQoSPolicy> </WebCategoryBaseQoSPolicy>
+    <BlockQuickQuic>Disable</BlockQuickQuic>
+    <ScanVirus>Disable</ScanVirus>
+    <ZeroDayProtection>Disable</ZeroDayProtection>
+    <ProxyMode>Disable</ProxyMode>
+    <DecryptHTTPS>Disable</DecryptHTTPS>
+    <ApplicationControl>None</ApplicationControl>
+    <ApplicationBaseQoSPolicy> </ApplicationBaseQoSPolicy>
+    <IntrusionPrevention>None</IntrusionPrevention>
+    <TrafficShappingPolicy>None</TrafficShappingPolicy>
+    <ScanSMTP>Disable</ScanSMTP>
+    <ScanSMTPS>Disable</ScanSMTPS>
+    <ScanIMAP>Disable</ScanIMAP>
+    <ScanIMAPS>Disable</ScanIMAPS>
+    <ScanPOP3>Disable</ScanPOP3>
+    <ScanPOP3S>Disable</ScanPOP3S>
+    <ScanFTP>Disable</ScanFTP>
+    <SourceSecurityHeartbeat>Disable</SourceSecurityHeartbeat>
+    <MinimumSourceHBPermitted>YELLOW</MinimumSourceHBPermitted>
+    <DestSecurityHeartbeat>Disable</DestSecurityHeartbeat>
+    <MinimumDestinationHBPermitted>No Restriction</MinimumDestinationHBPermitted>
+  </NetworkPolicy>
+</FirewallRule>
+
+<FirewallRule transactionid="firewall-domain-controller-vpn">
+  <Name>DC Comms VPN</Name>
+  <Description>Active Directory-Kommunikation via VPN</Description>
+  <IPFamily>IPv4</IPFamily>
+  <Status>Enable</Status>
+  <Position>After</Position>
+  <PolicyType>Network</PolicyType>
+  <After>
+    <Name>DC Comms</Name>
+  </After>
+  <NetworkPolicy>
+    <Action>Accept</Action>
+    <LogTraffic>Disable</LogTraffic>
+    <SkipLocalDestined>Disable</SkipLocalDestined>
+    <SourceZones>
+      <Zone>VPN</Zone>
+    </SourceZones>
+    <DestinationZones>
+      <Zone>Server</Zone>
+    </DestinationZones>
+    <Schedule>All The Time</Schedule>
+    <Services>
+      <Service>DNS</Service>
+      <Service>Active Directory (kein DNS)</Service>
+    </Services>
+    <DestinationNetworks>
+      <Network>Domain Controller</Network>
+    </DestinationNetworks>
+    <DSCPMarking>-1</DSCPMarking>
+    <WebFilter>None</WebFilter>
+    <WebCategoryBaseQoSPolicy> </WebCategoryBaseQoSPolicy>
+    <BlockQuickQuic>Disable</BlockQuickQuic>
+    <ScanVirus>Disable</ScanVirus>
+    <ZeroDayProtection>Disable</ZeroDayProtection>
+    <ProxyMode>Disable</ProxyMode>
+    <DecryptHTTPS>Disable</DecryptHTTPS>
+    <ApplicationControl>None</ApplicationControl>
+    <ApplicationBaseQoSPolicy> </ApplicationBaseQoSPolicy>
+    <IntrusionPrevention>None</IntrusionPrevention>
+    <TrafficShappingPolicy>None</TrafficShappingPolicy>
+    <ScanSMTP>Disable</ScanSMTP>
+    <ScanSMTPS>Disable</ScanSMTPS>
+    <ScanIMAP>Disable</ScanIMAP>
+    <ScanIMAPS>Disable</ScanIMAPS>
+    <ScanPOP3>Disable</ScanPOP3>
+    <ScanPOP3S>Disable</ScanPOP3S>
+    <ScanFTP>Disable</ScanFTP>
+    <SourceSecurityHeartbeat>Disable</SourceSecurityHeartbeat>
+    <MinimumSourceHBPermitted>YELLOW</MinimumSourceHBPermitted>
+    <DestSecurityHeartbeat>Disable</DestSecurityHeartbeat>
+    <MinimumDestinationHBPermitted>No Restriction</MinimumDestinationHBPermitted>
+  </NetworkPolicy>
+</FirewallRule>

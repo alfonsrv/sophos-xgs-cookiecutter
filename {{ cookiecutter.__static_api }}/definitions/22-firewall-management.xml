@@ -1,0 +1,53 @@
+<FirewallRule transactionid="firewall-management-network">
+  <Name>Management Network</Name>
+  <Description>Hypervisor / Management-Netzwerk Zugriff auf Server-Komponenten für Backup und Verwaltung</Description>
+  <IPFamily>IPv4</IPFamily>
+  <Status>Disable</Status>
+  <Position>Top</Position>
+  <PolicyType>Network</PolicyType>
+  <NetworkPolicy>
+    <Action>Accept</Action>
+    <LogTraffic>Enable</LogTraffic>
+    <SkipLocalDestined>Disable</SkipLocalDestined>
+    <SourceZones>
+      <Zone>Management</Zone>
+    </SourceZones>
+    <DestinationZones>
+      <Zone>DMZ</Zone>
+      <Zone>Server</Zone>
+    </DestinationZones>
+    <Schedule>All The Time</Schedule>
+    <Services>
+      <Service>DNS</Service>
+      <Service>SMB / CIFS</Service>
+      <Service>Remote Desktop / Terminal Services (RDP)</Service>
+      <Service>SSH 13370</Service>
+      <Service>NETBIOS</Service>
+      <Service>SSH / SFTP / SCP (22)</Service>
+    </Services>
+    <DSCPMarking>-1</DSCPMarking>
+    <WebFilter>None</WebFilter>
+    <WebCategoryBaseQoSPolicy> </WebCategoryBaseQoSPolicy>
+    <BlockQuickQuic>Disable</BlockQuickQuic>
+    <ScanVirus>Disable</ScanVirus>
+    <ZeroDayProtection>Disable</ZeroDayProtection>
+    <ProxyMode>Disable</ProxyMode>
+    <DecryptHTTPS>Disable</DecryptHTTPS>
+    <ApplicationControl>None</ApplicationControl>
+    <ApplicationBaseQoSPolicy> </ApplicationBaseQoSPolicy>
+    <IntrusionPrevention>None</IntrusionPrevention>
+    <TrafficShappingPolicy>None</TrafficShappingPolicy>
+    <ScanSMTP>Disable</ScanSMTP>
+    <ScanSMTPS>Disable</ScanSMTPS>
+    <ScanIMAP>Disable</ScanIMAP>
+    <ScanIMAPS>Disable</ScanIMAPS>
+    <ScanPOP3>Disable</ScanPOP3>
+    <ScanPOP3S>Disable</ScanPOP3S>
+    <ScanFTP>Disable</ScanFTP>
+    <SourceSecurityHeartbeat>Disable</SourceSecurityHeartbeat>
+    <MinimumSourceHBPermitted>No Restriction</MinimumSourceHBPermitted>
+    <DestSecurityHeartbeat>Disable</DestSecurityHeartbeat>
+    <MinimumDestinationHBPermitted>No Restriction</MinimumDestinationHBPermitted>
+  </NetworkPolicy>
+</FirewallRule>
+

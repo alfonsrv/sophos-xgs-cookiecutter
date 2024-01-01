@@ -1,0 +1,137 @@
+<FirewallRule transactionid="firewall-surfing-base">
+    <Name>Base Web Protection</Name>
+    <Description>Base web protection allowing nothing but updates via exceptions</Description>
+    <IPFamily>IPv4</IPFamily>
+    <Status>Enable</Status>
+    <Position>Bottom</Position>
+    <PolicyType>Network</PolicyType>
+    <NetworkPolicy>
+      <Action>Accept</Action>
+      <LogTraffic>Disable</LogTraffic>
+      <SkipLocalDestined>Disable</SkipLocalDestined>
+      <Schedule>All The Time</Schedule>
+      <Services>
+        <Service>HTTP+HTTPS</Service>
+      </Services>
+      <DSCPMarking>-1</DSCPMarking>
+      <WebFilter>Only Updates (RAUSYS)</WebFilter>
+      <WebCategoryBaseQoSPolicy> </WebCategoryBaseQoSPolicy>
+      <BlockQuickQuic>Enable</BlockQuickQuic>
+      <ScanVirus>Enable</ScanVirus>
+      <ZeroDayProtection>Enable</ZeroDayProtection>
+      <ProxyMode>Disable</ProxyMode>
+      <DecryptHTTPS>Enable</DecryptHTTPS>
+      <ApplicationControl>Block very high risk (Risk Level 5) apps</ApplicationControl>
+      <ApplicationBaseQoSPolicy> </ApplicationBaseQoSPolicy>
+      <IntrusionPrevention>None</IntrusionPrevention>
+      <TrafficShappingPolicy>None</TrafficShappingPolicy>
+      <ScanSMTP>Disable</ScanSMTP>
+      <ScanSMTPS>Disable</ScanSMTPS>
+      <ScanIMAP>Disable</ScanIMAP>
+      <ScanIMAPS>Disable</ScanIMAPS>
+      <ScanPOP3>Disable</ScanPOP3>
+      <ScanPOP3S>Disable</ScanPOP3S>
+      <ScanFTP>Disable</ScanFTP>
+      <SourceSecurityHeartbeat>Disable</SourceSecurityHeartbeat>
+      <MinimumSourceHBPermitted>No Restriction</MinimumSourceHBPermitted>
+      <DestSecurityHeartbeat>Disable</DestSecurityHeartbeat>
+      <MinimumDestinationHBPermitted>No Restriction</MinimumDestinationHBPermitted>
+    </NetworkPolicy>
+  </FirewallRule>
+
+<FirewallRule transactionid="firewall-surfing-client">
+  <Name>Client Surfing</Name>
+  <Description/>
+  <IPFamily>IPv4</IPFamily>
+  <Status>Enable</Status>
+  <Position>After</Position>
+  <PolicyType>Network</PolicyType>
+  <After>
+    <Name>Management SMTP</Name>
+  </After>
+  <NetworkPolicy>
+    <Action>Accept</Action>
+    <LogTraffic>Disable</LogTraffic>
+    <SkipLocalDestined>Disable</SkipLocalDestined>
+    <SourceZones>
+      <Zone>Clients</Zone>
+    </SourceZones>
+    <DestinationZones>
+      <Zone>WAN</Zone>
+    </DestinationZones>
+    <Schedule>All The Time</Schedule>
+    <Services>
+      <Service>HTTP+HTTPS</Service>
+    </Services>
+    <DSCPMarking>-1</DSCPMarking>
+    <WebFilter>Workplace Policy (RAUSYS)</WebFilter>
+    <WebCategoryBaseQoSPolicy> </WebCategoryBaseQoSPolicy>
+    <BlockQuickQuic>Enable</BlockQuickQuic>
+    <ScanVirus>Enable</ScanVirus>
+    <ZeroDayProtection>Enable</ZeroDayProtection>
+    <ProxyMode>Disable</ProxyMode>
+    <DecryptHTTPS>Enable</DecryptHTTPS>
+    <ApplicationControl>Block high risk (Risk Level 4 and 5) apps</ApplicationControl>
+    <ApplicationBaseQoSPolicy> </ApplicationBaseQoSPolicy>
+    <IntrusionPrevention>None</IntrusionPrevention>
+    <TrafficShappingPolicy>None</TrafficShappingPolicy>
+    <ScanSMTP>Disable</ScanSMTP>
+    <ScanSMTPS>Disable</ScanSMTPS>
+    <ScanIMAP>Disable</ScanIMAP>
+    <ScanIMAPS>Disable</ScanIMAPS>
+    <ScanPOP3>Disable</ScanPOP3>
+    <ScanPOP3S>Disable</ScanPOP3S>
+    <ScanFTP>Enable</ScanFTP>
+    <SourceSecurityHeartbeat>Disable</SourceSecurityHeartbeat>
+    <MinimumSourceHBPermitted>No Restriction</MinimumSourceHBPermitted>
+    <DestSecurityHeartbeat>Disable</DestSecurityHeartbeat>
+    <MinimumDestinationHBPermitted>No Restriction</MinimumDestinationHBPermitted>
+  </NetworkPolicy>
+</FirewallRule>
+
+<FirewallRule transactionid="firewall-surfing-guest">
+  <Name>GUEST Surfing</Name>
+  <Description/>
+  <IPFamily>IPv4</IPFamily>
+  <Status>Enable</Status>
+  <Position>After</Position>
+  <PolicyType>Network</PolicyType>
+  <After>
+    <Name>Client Surfing</Name>
+  </After>
+  <NetworkPolicy>
+    <Action>Accept</Action>
+    <LogTraffic>Disable</LogTraffic>
+    <SkipLocalDestined>Disable</SkipLocalDestined>
+    <SourceZones>
+      <Zone>WiFi_Guest</Zone>
+    </SourceZones>
+    <DestinationZones>
+      <Zone>WAN</Zone>
+    </DestinationZones>
+    <Schedule>All The Time</Schedule>
+    <DSCPMarking>-1</DSCPMarking>
+    <WebFilter>None</WebFilter>
+    <WebCategoryBaseQoSPolicy> </WebCategoryBaseQoSPolicy>
+    <BlockQuickQuic>Disable</BlockQuickQuic>
+    <ScanVirus>Disable</ScanVirus>
+    <ZeroDayProtection>Disable</ZeroDayProtection>
+    <ProxyMode>Disable</ProxyMode>
+    <DecryptHTTPS>Disable</DecryptHTTPS>
+    <ApplicationControl>None</ApplicationControl>
+    <ApplicationBaseQoSPolicy> </ApplicationBaseQoSPolicy>
+    <IntrusionPrevention>None</IntrusionPrevention>
+    <TrafficShappingPolicy>None</TrafficShappingPolicy>
+    <ScanSMTP>Disable</ScanSMTP>
+    <ScanSMTPS>Disable</ScanSMTPS>
+    <ScanIMAP>Disable</ScanIMAP>
+    <ScanIMAPS>Disable</ScanIMAPS>
+    <ScanPOP3>Disable</ScanPOP3>
+    <ScanPOP3S>Disable</ScanPOP3S>
+    <ScanFTP>Disable</ScanFTP>
+    <SourceSecurityHeartbeat>Disable</SourceSecurityHeartbeat>
+    <MinimumSourceHBPermitted>No Restriction</MinimumSourceHBPermitted>
+    <DestSecurityHeartbeat>Disable</DestSecurityHeartbeat>
+    <MinimumDestinationHBPermitted>No Restriction</MinimumDestinationHBPermitted>
+  </NetworkPolicy>
+</FirewallRule>

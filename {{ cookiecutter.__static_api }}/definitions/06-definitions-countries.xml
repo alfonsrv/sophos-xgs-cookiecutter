@@ -1,0 +1,42 @@
+<CountryGroup transactionid="countries-safe">
+  <Name>Safe Countries</Name>
+  <Description>Western countries considered mostly safe</Description>
+  <CountryList>
+    <Country>Antarctica</Country>
+    <Country>Austria</Country>
+    <Country>Australia</Country>
+    <Country>Belgium</Country>
+    <Country>Canada</Country>
+    <Country>Switzerland</Country>
+    <Country>Cyprus</Country>
+    <Country>Czech Republic</Country>
+    <Country>Germany</Country>
+    <Country>Denmark</Country>
+    <Country>Spain</Country>
+    <Country>Fiji</Country>
+    <Country>France</Country>
+    <Country>United Kingdom</Country>
+    <Country>Greenland</Country>
+    <Country>Greece</Country>
+    <Country>Croatia</Country>
+    <Country>Hungary</Country>
+    <Country>Ireland</Country>
+    <Country>Iceland</Country>
+    <Country>Italy</Country>
+    <Country>Japan</Country>
+    <Country>Liechtenstein</Country>
+    <Country>Luxembourg</Country>
+    <Country>Monaco</Country>
+    <Country>Malta</Country>
+    <Country>Netherlands</Country>
+    <Country>Norway</Country>
+    <Country>Poland</Country>
+    <Country>Portugal</Country>
+    <Country>Sweden</Country>
+    <Country>Singapore</Country>
+    <Country>Slovakia</Country>
+    <Country>United States</Country>
+    <Country>British Virgin Islands</Country>
+    <Country>U.S. Virgin Islands</Country>
+  </CountryList>
+</CountryGroup>

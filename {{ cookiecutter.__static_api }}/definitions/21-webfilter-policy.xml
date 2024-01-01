@@ -1,0 +1,173 @@
+<FileType transactionid="webfilter-filetype">
+  <Name>Windows executables</Name>
+  <FileExtensionList>
+    <FileExtension>bat</FileExtension>
+    <FileExtension>cmd</FileExtension>
+    <FileExtension>com</FileExtension>
+    <FileExtension>vbs</FileExtension>
+    <FileExtension>wsf</FileExtension>
+    <FileExtension>dll</FileExtension>
+    <FileExtension>ps1</FileExtension>
+    <FileExtension>psm1</FileExtension>
+    <FileExtension>psd1</FileExtension>
+    <FileExtension>psrc</FileExtension>
+    <FileExtension>pssession</FileExtension>
+  </FileExtensionList>
+  <MIMEHeaderList>
+    <MIMEHeader>application/bat</MIMEHeader>
+    <MIMEHeader>application/cmd</MIMEHeader>
+    <MIMEHeader>text/vbscript</MIMEHeader>
+    <MIMEHeader>application/wsf</MIMEHeader>
+    <MIMEHeader>application/x-msdownload</MIMEHeader>
+    <MIMEHeader>application/x-powershell</MIMEHeader>
+  </MIMEHeaderList>
+  <Description>PowerShell files and modules, Batch</Description>
+</FileType>
+
+<WebFilterPolicy transactionid="webfilter-policy-updates">
+  <Name>Only Updates (RAUSYS)</Name>
+  <DefaultAction>Deny</DefaultAction>
+  <EnableReporting>Enable</EnableReporting>
+  <DownloadFileSizeRestriction>0</DownloadFileSizeRestriction>
+  <DownloadFileSizeRestrictionEnabled>0</DownloadFileSizeRestrictionEnabled>
+  <GoogAppDomainList/>
+  <GoogAppDomainListEnabled>0</GoogAppDomainListEnabled>
+  <YoutubeFilterIsStrict>0</YoutubeFilterIsStrict>
+  <YoutubeFilterEnabled>0</YoutubeFilterEnabled>
+  <EnforceSafeSearch>0</EnforceSafeSearch>
+  <EnforceImageLicensing>0</EnforceImageLicensing>
+  <XFFEnabled>0</XFFEnabled>
+  <Office365TenantsList/>
+  <Office365DirectoryId/>
+  <Office365Enabled>0</Office365Enabled>
+  <QuotaLimit>60</QuotaLimit>
+  <Description>Nichts erlauben, außer Updates via Exceptions</Description>
+</WebFilterPolicy>
+
+<WebFilterPolicy transactionid="webfilter-policy-workplace">
+  <Name>Workplace Policy (RAUSYS)</Name>
+  <DefaultAction>Allow</DefaultAction>
+  <EnableReporting>Enable</EnableReporting>
+  <DownloadFileSizeRestriction>0</DownloadFileSizeRestriction>
+  <DownloadFileSizeRestrictionEnabled>0</DownloadFileSizeRestrictionEnabled>
+  <GoogAppDomainList/>
+  <GoogAppDomainListEnabled>0</GoogAppDomainListEnabled>
+  <YoutubeFilterIsStrict>0</YoutubeFilterIsStrict>
+  <YoutubeFilterEnabled>0</YoutubeFilterEnabled>
+  <EnforceSafeSearch>0</EnforceSafeSearch>
+  <EnforceImageLicensing>0</EnforceImageLicensing>
+  <XFFEnabled>0</XFFEnabled>
+  <Office365TenantsList/>
+  <Office365DirectoryId/>
+  <Office365Enabled>0</Office365Enabled>
+  <QuotaLimit>60</QuotaLimit>
+  <Description>A typical starter policy with options suitable for many organizations</Description>
+  <RuleList>
+    <Rule>
+      <CategoryList>
+        <Category>
+          <ID>Blocked URLs for Default Policy</ID>
+          <type>URLGroup</type>
+        </Category>
+      </CategoryList>
+      <HTTPAction>Deny</HTTPAction>
+      <HTTPSAction>Deny</HTTPSAction>
+      <FollowHTTPAction>1</FollowHTTPAction>
+      <ExceptionList>
+        <FileTypeCategory/>
+      </ExceptionList>
+      <Schedule>All The Time</Schedule>
+      <PolicyRuleEnabled>1</PolicyRuleEnabled>
+      <CCLRuleEnabled>0</CCLRuleEnabled>
+    </Rule>
+    <Rule>
+      <CategoryList>
+        <Category>
+          <ID>Risky Downloads</ID>
+          <type>UserActivity</type>
+        </Category>
+        <Category>
+          <ID>Suspicious</ID>
+          <type>UserActivity</type>
+        </Category>
+      </CategoryList>
+      <HTTPAction>Deny</HTTPAction>
+      <HTTPSAction>Deny</HTTPSAction>
+      <FollowHTTPAction>1</FollowHTTPAction>
+      <ExceptionList>
+        <FileTypeCategory/>
+      </ExceptionList>
+      <Schedule>All The Time</Schedule>
+      <PolicyRuleEnabled>1</PolicyRuleEnabled>
+      <CCLRuleEnabled>0</CCLRuleEnabled>
+    </Rule>
+    <Rule>
+      <CategoryList>
+        <Category>
+          <ID>Nudity and Adult Content</ID>
+          <type>UserActivity</type>
+        </Category>
+      </CategoryList>
+      <HTTPAction>Deny</HTTPAction>
+      <HTTPSAction>Deny</HTTPSAction>
+      <FollowHTTPAction>1</FollowHTTPAction>
+      <ExceptionList>
+        <FileTypeCategory/>
+      </ExceptionList>
+      <Schedule>All The Time</Schedule>
+      <PolicyRuleEnabled>1</PolicyRuleEnabled>
+      <CCLRuleEnabled>0</CCLRuleEnabled>
+    </Rule>
+    <Rule>
+      <CategoryList>
+        <Category>
+          <ID>Not Suitable for the Office</ID>
+          <type>UserActivity</type>
+        </Category>
+      </CategoryList>
+      <HTTPAction>Deny</HTTPAction>
+      <HTTPSAction>Deny</HTTPSAction>
+      <FollowHTTPAction>1</FollowHTTPAction>
+      <ExceptionList>
+        <FileTypeCategory/>
+      </ExceptionList>
+      <Schedule>All The Time</Schedule>
+      <PolicyRuleEnabled>1</PolicyRuleEnabled>
+      <CCLRuleEnabled>0</CCLRuleEnabled>
+    </Rule>
+    <Rule>
+      <CategoryList>
+        <Category>
+          <ID>Unproductive Browsing</ID>
+          <type>UserActivity</type>
+        </Category>
+      </CategoryList>
+      <HTTPAction>Deny</HTTPAction>
+      <HTTPSAction>Deny</HTTPSAction>
+      <FollowHTTPAction>1</FollowHTTPAction>
+      <ExceptionList>
+        <FileTypeCategory/>
+      </ExceptionList>
+      <Schedule>Work hours (5 Day week)</Schedule>
+      <PolicyRuleEnabled>1</PolicyRuleEnabled>
+      <CCLRuleEnabled>0</CCLRuleEnabled>
+    </Rule>
+    <Rule>
+      <CategoryList>
+        <Category>
+          <ID>Windows executables</ID>
+          <type>FileType</type>
+        </Category>
+      </CategoryList>
+      <HTTPAction>Deny</HTTPAction>
+      <HTTPSAction>Deny</HTTPSAction>
+      <FollowHTTPAction>1</FollowHTTPAction>
+      <ExceptionList>
+        <FileTypeCategory/>
+      </ExceptionList>
+      <Schedule>All The Time</Schedule>
+      <PolicyRuleEnabled>1</PolicyRuleEnabled>
+      <CCLRuleEnabled>0</CCLRuleEnabled>
+    </Rule>
+  </RuleList>
+</WebFilterPolicy>

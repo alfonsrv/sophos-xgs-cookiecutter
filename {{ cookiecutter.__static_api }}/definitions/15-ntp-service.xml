@@ -1,0 +1,96 @@
+<FQDNHost transactionid="ntp-service-host">
+  <Name>pool.ntp.org</Name>
+  <FQDN>pool.ntp.org</FQDN>
+</FQDNHost>
+<IPSPolicy transactionid="ntp-service-ips">
+  <Name>NTP Policy</Name>
+  <Description/>
+  <RuleList>
+    <Rule>
+      <RuleName>NTP</RuleName>
+      <SignaturSelectionType>All Application</SignaturSelectionType>
+      <CategoryList>
+        <Category>All Categories</Category>
+      </CategoryList>
+      <SmartFilter>ntp</SmartFilter>
+      <RuleType>Default Signature</RuleType>
+      <Action>Drop Packet</Action>
+    </Rule>
+  </RuleList>
+</IPSPolicy>
+
+<NATRule transactionid="ntp-service-nat">
+  <Name>NAT NTP SERVER</Name>
+  <Description>Sophos UTM NAT-emulation</Description>
+  <IPFamily>IPv4</IPFamily>
+  <Status>Enable</Status>
+  <Position>Top</Position>
+  <LinkedFirewallrule>None</LinkedFirewallrule>
+  <TranslatedDestination>pool.ntp.org</TranslatedDestination>
+  <OriginalServices>
+    <Service>NTP</Service>
+  </OriginalServices>
+  <TranslatedService>Original</TranslatedService>
+  <OverrideInterfaceNATPolicy>Disable</OverrideInterfaceNATPolicy>
+  <TranslatedSource>MASQ</TranslatedSource>
+  <NATMethod>StickyIP</NATMethod>
+  <HealthCheck>Disable</HealthCheck>
+</NATRule>
+
+<FirewallRule transactionid="ntp-service-firewall">
+  <Name>NTP Service Simulation</Name>
+  <Description>Sophos SG UTM NTP service simulation</Description>
+  <IPFamily>IPv4</IPFamily>
+  <Status>Enable</Status>
+  <Position>Bottom</Position>
+  <PolicyType>Network</PolicyType>
+  <NetworkPolicy>
+    <Action>Accept</Action>
+    <LogTraffic>Disable</LogTraffic>
+    <SkipLocalDestined>Disable</SkipLocalDestined>
+    <SourceZones>
+      <Zone>LAN</Zone>
+      <Zone>DMZ</Zone>
+      <Zone>VPN</Zone>
+      <Zone>WiFi</Zone>
+      <Zone>Clients</Zone>
+      <Zone>Server</Zone>
+      <Zone>VoIP</Zone>
+      <Zone>MgmtPort</Zone>
+      <Zone>Management</Zone>
+    </SourceZones>
+    <DestinationZones>
+      <Zone>WAN</Zone>
+    </DestinationZones>
+    <Schedule>All The Time</Schedule>
+    <Services>
+      <Service>NTP</Service>
+    </Services>
+    <DestinationNetworks>
+      <Network>pool.ntp.org</Network>
+    </DestinationNetworks>
+    <DSCPMarking>-1</DSCPMarking>
+    <WebFilter>None</WebFilter>
+    <WebCategoryBaseQoSPolicy> </WebCategoryBaseQoSPolicy>
+    <BlockQuickQuic>Disable</BlockQuickQuic>
+    <ScanVirus>Disable</ScanVirus>
+    <ZeroDayProtection>Disable</ZeroDayProtection>
+    <ProxyMode>Disable</ProxyMode>
+    <DecryptHTTPS>Disable</DecryptHTTPS>
+    <ApplicationControl>None</ApplicationControl>
+    <ApplicationBaseQoSPolicy> </ApplicationBaseQoSPolicy>
+    <IntrusionPrevention>NTP Policy</IntrusionPrevention>
+    <TrafficShappingPolicy>None</TrafficShappingPolicy>
+    <ScanSMTP>Disable</ScanSMTP>
+    <ScanSMTPS>Disable</ScanSMTPS>
+    <ScanIMAP>Disable</ScanIMAP>
+    <ScanIMAPS>Disable</ScanIMAPS>
+    <ScanPOP3>Disable</ScanPOP3>
+    <ScanPOP3S>Disable</ScanPOP3S>
+    <ScanFTP>Disable</ScanFTP>
+    <SourceSecurityHeartbeat>Disable</SourceSecurityHeartbeat>
+    <MinimumSourceHBPermitted>No Restriction</MinimumSourceHBPermitted>
+    <DestSecurityHeartbeat>Disable</DestSecurityHeartbeat>
+    <MinimumDestinationHBPermitted>No Restriction</MinimumDestinationHBPermitted>
+  </NetworkPolicy>
+</FirewallRule>

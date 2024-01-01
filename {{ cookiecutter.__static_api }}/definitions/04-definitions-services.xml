@@ -1,0 +1,745 @@
+<Services transactionid="service-print-hpdirect">
+  <Name>Print - HP JetDirect</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>9100</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-print-ipp">
+  <Name>Print - IPP</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>631</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-print-ldp">
+  <Name>Print - LDP</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>515</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-syslog-forward">
+  <Name>syslog Forwarding</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5514</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-smtps">
+  <Name>SMTPS (465)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>465</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-windows-smb">
+  <Name>SMB / CIFS</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>445</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>445</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-windows-netbios">
+  <Name>NETBIOS</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>135:139</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>135:139</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-windows-ldaps">
+  <Name>LDAP-SSL</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>636</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-windows-rpc">
+  <Name>Windows RPC (49152:65535)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>49152:65535</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-windows-gc">
+  <Name>Global Catalog</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>3268:3269</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-windows-kerberos">
+  <Name>Kerberos</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>88</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>88</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-windows-kerberos-change">
+  <Name>Kerberos Change</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>464</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-windows-mssql">
+  <Name>MSSQL</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>1433</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>1434</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-windows-adws">
+  <Name>ADDS ADWS (9389)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>9389</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-windows-rdp">
+  <Name>Remote Desktop / Terminal Services (RDP)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>3389</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>3389</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-windows-winrm">
+  <Name>WinRM</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5985:5986</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-ilo">
+  <Name>iLO Remote Console</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>17990</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>17990</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-ilo-media">
+  <Name>iLO Virtual Media</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>17988</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>17988</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-ssh13370">
+  <Name>SSH 13370</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>13370</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-ssh-explicit">
+  <Name>SSH / SFTP / SCP (22)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>22</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-http-proxy">
+  <Name>HTTP Proxy (8080)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>8080</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-http-tomcat">
+  <Name>HTTPS Tomcat (8443)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>8443</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-unifi-stun">
+  <Name>UniFi STUN</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>3478</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-unifi-captive">
+  <Name>UniFi Captive HTTP (8880)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>8880</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-unifi-captive2">
+  <Name>UniFi Captive HTTPS (8843)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>8843</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-unifi-discovery">
+  <Name>UniFi Device Discovery</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>10001</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-veeam">
+  <Name>Veeam - alles (2500:3300)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>2500:3300</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-ssh49711">
+  <Name>SSH Unlock (49711)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>49711</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-sip-ssl">
+  <Name>SIP-SSL</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5061</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5061</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-sip">
+  <Name>SIP+SIP SSL (5060:5061)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5060:5061</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5060:5061</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-3cx-main">
+  <Name>3CX (5000)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5000</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5000</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-3cx-tunnel">
+  <Name>3CX Tunnel (5090)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5090</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5090</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-3cx-sip">
+  <Name>3CX SIP (5060:5061)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5060:5061</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5060:5061</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-3cx-ios-push">
+  <Name>3CX iOS Push (2195:2196)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>2195:2196</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>2195:2196</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services><Services transactionid="service-3cx-webclient">
+  <Name>3CX Webclient (9000:10999)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>9000:10999</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>9000:10999</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-sip-gigaset">
+  <Name>Gigaset Audio (RTP)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5000:8000</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5000:8000</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-sip-yealink">
+  <Name>Yealink Audio (RTP)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>11780:12780</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>11780:12780</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+
+<Services transactionid="service-teams-rtp">
+  <Name>Teams RTP</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>3478:3481</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>3478:3481</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-teams-meeting">
+  <Name>Teams Meetings</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>50000:50060</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>50000:50060</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+
+<Services transactionid="service-http-10443">
+  <Name>HTTPS 10443</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>10443</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-rausys-sslvpn">
+  <Name>SSL VPN (RAUSYS)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>13370</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-veeam-mgmt">
+  <Name>Veeam 10003</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>10003</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-veeam-single">
+  <Name>Veeam 9392:9405</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>9392:9405</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-webadmin">
+  <Name>WebAdmin</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>4444</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-userportal">
+  <Name>UserPortal</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>4443</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-iperf">
+  <Name>iperf (5201)</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5201</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5201</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-db-mysql">
+  <Name>MySQL</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>3306</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-psql">
+  <Name>PostgreSQL</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>5432</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<Services transactionid="service-db-redis">
+  <Name>Redis</Name>
+  <Type>TCPorUDP</Type>
+  <ServiceDetails>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>6379</DestinationPort>
+      <Protocol>TCP</Protocol>
+    </ServiceDetail>
+    <ServiceDetail>
+      <SourcePort>1:65535</SourcePort>
+      <DestinationPort>6379</DestinationPort>
+      <Protocol>UDP</Protocol>
+    </ServiceDetail>
+  </ServiceDetails>
+</Services>
+<ServiceGroup transactionid="servicegroup-websurfing">
+  <Name>Web Surfing</Name>
+  <Description>0815 Webserver Ports</Description>
+  <ServiceList>
+    <Service>HTTP</Service>
+    <Service>HTTPS</Service>
+    <Service>HTTP Proxy (8080)</Service>
+    <Service>HTTPS Tomcat (8443)</Service>
+  </ServiceList>
+</ServiceGroup>
+<ServiceGroup transactionid="servicegroup-unifi">
+  <Name>UniFi Infrastruktur</Name>
+  <Description>Kommunikation APs mit Controller, Zugriff Management-Interface + Captive Portal</Description>
+  <ServiceList>
+    <Service>DNS</Service>
+    <Service>HTTPS</Service>
+    <Service>NTP</Service>
+    <Service>SSH</Service>
+    <Service>HTTP Proxy (8080)</Service>
+    <Service>HTTPS Tomcat (8443)</Service>
+    <Service>UniFi STUN</Service>
+    <Service>UniFi Captive HTTP (8880)</Service>
+    <Service>UniFi Captive HTTPS (8843)</Service>
+    <Service>UniFi Device Discovery</Service>
+  </ServiceList>
+</ServiceGroup>
+<ServiceGroup transactionid="servicegroup-printing">
+  <Name>Network Printing</Name>
+  <Description>0815 Ports für Drucker-Kommunikation (kein Windows-Printing)</Description>
+  <ServiceList>
+    <Service>PING</Service>
+    <Service>SNMP</Service>
+    <Service>ICMP</Service>
+    <Service>Print - HP JetDirect</Service>
+    <Service>Print - IPP</Service>
+    <Service>Print - LDP</Service>
+    <Service>SMB / CIFS</Service>
+    <Service>NETBIOS</Service>
+  </ServiceList>
+</ServiceGroup>
+<ServiceGroup transactionid="servicegroup-emails">
+  <Name>Email Messaging</Name>
+  <Description>Standardports E-Mail-Versand/-Empfang (Legacy)</Description>
+  <ServiceList>
+    <Service>IMAP</Service>
+    <Service>POP3</Service>
+    <Service>SMTP</Service>
+    <Service>SMTP(S)</Service>
+    <Service>IMAPS</Service>
+    <Service>POP3S</Service>
+    <Service>SMTPS_465</Service>
+  </ServiceList>
+</ServiceGroup>
+<ServiceGroup transactionid="servicegroup-adds">
+  <Name>Active Directory (kein DNS)</Name>
+  <Description>Basisdienste Active Directory (DNS muss explizit hinzugefügt werden)</Description>
+  <ServiceList>
+    <Service>LDAP</Service>
+    <Service>NTP</Service>
+    <Service>LDAP-SSL</Service>
+    <Service>Global Catalog</Service>
+    <Service>Kerberos Change</Service>
+    <Service>SMB / CIFS</Service>
+    <Service>NETBIOS</Service>
+    <Service>Kerberos</Service>
+  </ServiceList>
+</ServiceGroup>
+<ServiceGroup transactionid="servicegroup-smb">
+  <Name>SMB Kommunikation</Name>
+  <Description>SMB / CIFS + NETBIOS Kommunikation</Description>
+  <ServiceList>
+    <Service>SMB / CIFS</Service>
+    <Service>NETBIOS</Service>
+  </ServiceList>
+</ServiceGroup>
+<ServiceGroup transactionid="servicegroup-management">
+  <Name>Management</Name>
+  <Description>RAUSYS Management Ports</Description>
+  <ServiceList>
+    <Service>HTTP</Service>
+    <Service>HTTPS</Service>
+    <Service>PING</Service>
+    <Service>SSH</Service>
+    <Service>TELNET</Service>
+    <Service>ICMP</Service>
+    <Service>PING6</Service>
+    <Service>ICMPv6</Service>
+    <Service>Remote Desktop / Terminal Services (RDP)</Service>
+    <Service>iLO Remote Console</Service>
+    <Service>iLO Virtual Media</Service>
+    <Service>SSH 13370</Service>
+    <Service>SSH Unlock (49711)</Service>
+    <Service>WinRM</Service>
+    <Service>WebAdmin</Service>
+    <Service>UserPortal</Service>
+  </ServiceList>
+</ServiceGroup>
+<ServiceGroup transactionid="servicegroup-http-https">
+  <Name>HTTP+HTTPS</Name>
+  <Description/>
+  <ServiceList>
+    <Service>HTTP</Service>
+    <Service>HTTPS</Service>
+  </ServiceList>
+</ServiceGroup>

@@ -1,0 +1,23 @@
+<IPHost transactionid="ip-expurgate-1">
+  <Name>eXpurgate Network-1</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>195.190.135.0</IPAddress>
+  <Subnet>255.255.255.0</Subnet>
+</IPHost>
+<IPHost transactionid="ip-expurgate-2">
+  <Name>eXpurgate Network-2</Name>
+  <IPFamily>IPv4</IPFamily>
+  <HostType>Network</HostType>
+  <IPAddress>194.145.224.0</IPAddress>
+  <Subnet>255.255.255.0</Subnet>
+</IPHost>
+<IPHostGroup transactionid="ip-expurgate-group">
+  <Name>eXpurgate Networks (eleven)</Name>
+  <Description>eleven eXpurgate E-Mail Security Upstream Networks</Description>
+  <HostList>
+    <Host>eXpurgate Network-1</Host>
+    <Host>eXpurgate Network-2</Host>
+  </HostList>
+  <IPFamily>IPv4</IPFamily>
+</IPHostGroup>

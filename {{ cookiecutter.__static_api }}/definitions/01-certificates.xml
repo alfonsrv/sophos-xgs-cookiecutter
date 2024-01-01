@@ -1,0 +1,31 @@
+<SelfSignedCertificateAuthority transactionid="certificate-ca">
+    <OrganizationUnitName>RAUSYS IT SecOps</OrganizationUnitName>
+    <EmailAddress>{{ cookiecutter.email }}</EmailAddress>
+    <CommonName>{{ cookiecutter.hostname }}</CommonName>
+    <OrganizationName>{{ cookiecutter.client }}</OrganizationName>
+    <LocalityName>Stuttgart</LocalityName>
+    <StateProvinceName>BW</StateProvinceName>
+    <CountryName>DE</CountryName>
+    <KeyType>RSA</KeyType>
+    <KeyLength>4096</KeyLength>
+    <CurveName/>
+    <SecureHash>SHA - 512</SecureHash>
+</SelfSignedCertificateAuthority>
+
+<Certificate transactionid="certificate-appliance">
+  <Action>GenerateSelfSignedCertificate</Action>
+  <Name>ApplianceCertificate_v2</Name>
+  <ValidFrom>{% now 'local', '%Y' %}-{% now 'local', '%m' %}-{% now 'local', '%d' %}</ValidFrom>
+  <ValidUpto>2040-05-04</ValidUpto>
+  <OrganizationUnitName>RAUSYS IT SecOps</OrganizationUnitName>
+  <EmailAddress>{{ cookiecutter.email }}</EmailAddress>
+  <CommonName>{{ cookiecutter.hostname }}</CommonName>
+  <OrganizationName>{{ cookiecutter.client }}</OrganizationName>
+  <LocalityName>Stuttgart</LocalityName>
+  <StateProvinceName>BW</StateProvinceName>
+  <CountryName>DE</CountryName>
+  <KeyType>RSA</KeyType>
+  <KeyLength>4096</KeyLength>
+  <SecureHash>SHA - 512</SecureHash>
+  <CertificateIDType>DNS</CertificateIDType>
+</Certificate>
