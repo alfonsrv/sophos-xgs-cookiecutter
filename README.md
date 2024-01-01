@@ -32,7 +32,7 @@ Bringing all the default configuration the Sophos team missed to your XGS. 🚀
 2. Ensure your client's local IP address is whitelisted for XGS API access (*SYSTEM → Backup & firmware → API*)
 3. Download and install [Python 3](https://www.python.org/downloads/)
 4. Install `cookiecutter` library (`pip3 install cookiecutter`)
-5. Run `cookiecutter git+https://https://github.com/alfonsrv/sophos-xgs-cookiecutter` – ALTERNATIVELY: Download this repro and run `cookiecutter sophos-xgs-cookiecutter-main.zip`
+5. Run `cookiecutter git+https://github.com/alfonsrv/sophos-xgs-cookiecutter` – ALTERNATIVELY: Download this repro and run `cookiecutter sophos-xgs-cookiecutter-main.zip`
 6. Follow the prompts to configure and tank up your XGS 💥
 
 Should XGS tanker script not be run instantly – running it later manually at any point is easily possible by opening a shell
