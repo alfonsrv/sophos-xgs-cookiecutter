@@ -3,7 +3,7 @@
 <DHCPRelay transactionid="dhcp-relay">
   <Name>DC_Relay</Name>
   <IPFamily>IPv4</IPFamily>
-  <Interface>{% if cookiecutter.interface_config %}lag1{% endif %}</Interface>
+  <Interface>{% if cookiecutter.interface_config %}lag1{% else %}Port1{% endif %}</Interface>
   <DHCPServerIP>{{ cookiecutter.domain_controller_ip }}</DHCPServerIP>
   <RelaythroughIPSec>Enable</RelaythroughIPSec>
 </DHCPRelay>
@@ -13,7 +13,7 @@
 <DHCPServer transactionid="dhcp-server">
   <Name>VLAN_1</Name>
   <Status>1</Status>
-  <Interface>{% if cookiecutter.interface_config %}lag1{% endif %}</Interface>
+  <Interface>{% if cookiecutter.interface_config %}lag1{% else %}Port1{% endif %}</Interface>
   <IPLease>
       <IP>{{ cookiecutter.__network_address_scope }}</IP>
   </IPLease>

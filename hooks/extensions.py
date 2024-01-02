@@ -39,3 +39,11 @@ def strong_password(value):
     password = ''.join(secrets.choice(alphabet) for _ in range(LENGTH))
     password = '-'.join([password[i:i + 16] for i in range(0, LENGTH, 16)])
     return password
+
+
+@simple_filter
+def prefix_extract(value):
+    """ Gets the first part of a customer name as the suggested prefix """
+    name = value.replace(string.punctuation, ' ')
+    return name.split(' ')[0].upper()[:4]
+

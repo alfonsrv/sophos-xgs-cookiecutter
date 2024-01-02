@@ -35,8 +35,14 @@ Bringing all the default configuration the Sophos team missed to your XGS. 🚀
 5. Run `cookiecutter git+https://github.com/alfonsrv/sophos-xgs-cookiecutter` – ALTERNATIVELY: Download this repro and run `cookiecutter sophos-xgs-cookiecutter-main.zip`
 6. Follow the prompts to configure and tank up your XGS 💥
 
-Should XGS tanker script not be run instantly – running it later manually at any point is easily possible by opening a shell
-in the cookiecutter-generated directory (`xgs-tanker-api`) and then running `pip3 install -r requirements.txt`, followed by `python3 main.py`  
+---
+
+Running the script manually after generation is easy.
+
+1. Navigate to the cookiecutter-generated directory (`xgs-tanker-api`)
+2. Open a shell (`cmd`/`bash`) in the directory
+3. Run `pip3 install -r requirements.txt`
+4. Execute the XGS tanker script by running `python3 main.py`
 
 Turn on debug logging (see request and response payloads) by setting `settings.LOG_LEVEL` to `logging.DEBUG` 
 
@@ -71,6 +77,42 @@ other configuration potentials.
 * 👍 Generally easier to understand concept-wise  
 * 👎 Less transparent tracking of success / failure on single action-basis  
 * 👎 While recommended by Sophos for a big change volume, the XGS can be left in inconsistent state if a single action fails  
+
+
+## Configuration Overview
+
+Each configuration is applied in a logical set using XML files (folder `definitions`), essentially containing the payload sent to the XGS. 
+The payloads are divided by `transactionid` to make easy distinction of success / failure possible on a single-action basis.
+
+Reference what the XGS tanker script configures:
+
+| XML file                          | Actions executed                                                                                                                         |
+|-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| `01-certificates`                 | Regenerates Certificate Authority + ApplianceCertificate with better encryption standards                                                | 
+| `02-admin-basic`                  | Configures Ports (WebAdmin, UserPortal, VPNPortal), Password Complexity requirements, XGS config e-mail backups, notifications, timezone |
+| `03-zones`                        | Creates sensible default Zones + defines base ACLs for services                                                                          |
+| `04-definitions-services`         | Well-known ports and services and service groups                                                                                         |
+| `05-definitions-private-networks` | Configures Class A, Class B, Class C network scopes                                                                                      |
+| `06-definitions-countries`        | "Safe Countries" in case of country-filtering requirements                                                                               |
+| `08-definitions-dns`              | Cloudflare + Google DNS and XGS forward lookup configuration                                                                             |
+| `09-definitions-client-dynamic`   | Customer-specific configuration (AD DS auth server, domain controller, DNS request route)                                                |
+| `12-admin-management`             | Firewall ACL skips via Management port + RAUSYS WAN                                                                                      |
+| `15-ntp-service`                  | NTP service for clients to simulate SG functionality (NAT, Firewall Policy, IPS policy)                                                  |
+| `16-definitions-expurgate`        | eXpurgate networks definitions                                                                                                           |
+| `17-definitions-exchange`         | Microsoft Exchange networks definitions                                                                                                  |
+| `18-definitions-teams`            | Microsoft Teams networks + services definitions                                                                                          |
+| `19-webfilter-basic`              | Webfilter configuration (content scanning, block unknown certificates, max scan size, block unscannable content)                         |
+| `20-webfilter-exceptions`         | Exceptions to not be processed by the webfilter, allowing for full functionality for subservices (e.g. Entra ID Connect hosts)           |
+| `21-webfilter-policy`             | RAUSYS Workplace definition + definition to only allow required OS + application updates                                                 |
+| `22-firewall-management`          | Firewall Policy for Management network communications                                                                                    |
+| `23-firewall-domain-controllers`  | Firewall Policy for Domain Controller (AD DS) communications + accessibility                                                             |
+| `24-firewall-printserver`         | Firewall Policy for print server communications (client to server + server to printers)                                                  |
+| `25-firewall-surfing`             | Firewall Policy for webfilter configuration (defined in `21-webfilter-policy`)                                                           |
+| `26-firewall-groups`              | Assign Firewall Policies to groups                                                                                                       |
+| `30-intrusion-prevention`         | Enable Intrusion Prevention Basics + better packets default values, while keeping flood detection disabled                               |
+| `90-interfaces`                   | Interface WAN Failover + lag1 Active-Backup configuration for LAN                                                                        |
+| `91-dhcp-server`                  | DHCP server configuration or DHCP relay to Domain Controllers for VLAN1                                                                  |
+| `99-backup-now`                    | Create instant backup via previously configured e-mail                                                                                   |
 
 
 ## Limitations

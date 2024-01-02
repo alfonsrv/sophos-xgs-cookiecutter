@@ -173,10 +173,8 @@
   <AllowAutoInstallOfHotFixes>Enable</AllowAutoInstallOfHotFixes>
 </Hotfix>
 
-{% if cookiecutter.timezone %}
 <Time transactionid="admin-time">
-  <TimeZone>Europe/Berlin</TimeZone>
+  <TimeZone>{{ cookiecutter.timezone }}</TimeZone>
   <PredefinedNTPServer>Enable</PredefinedNTPServer>
   <SyncwithNTPServer>1</SyncwithNTPServer>
 </Time>
-{% endif %}

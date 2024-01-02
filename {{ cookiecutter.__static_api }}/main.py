@@ -82,6 +82,17 @@ def process_definitions(*, api: SophosAPI):
 
 
 if __name__ == '__main__':
+    print(r"""
+        ____  ___________  _________
+        \   \/  /  _____/ /   _____/
+         \     /   \  ___ \_____  \ 
+         /     \    \_\  \/        \
+        /___/\  \______  /_______  /
+              \_/      \/        \/ 
+          Tanker Script by RAUSYS
+               www.rausys.de
+
+    """)
     logger.info(f'Starting up XGS Tanker Script (IP addr {settings.XGS_IP_ADDRESS}:{settings.XGS_PORT})')
     api = SophosAPI(
         ip_address=settings.XGS_IP_ADDRESS,
