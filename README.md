@@ -5,9 +5,10 @@
 [![XGS Version](https://img.shields.io/badge/XGS%20Version-20.0-dc2f02.svg?style=flat-square&logoColor=white)](https://doc.sophos.com/nsg/sophos-firewall/20.0/API/index.html)
 
 RAUSYS Sophos XGS pre-configuration script via REST API or import-export upload. 
-Defines well-known services, backup configuration and other best-practices.
+Defines well-known services, backup configuration and other best-practices 
+(see [Configuration Overview](#configuration-overview) for details)  
 
-Bringing all the default configuration the Sophos team missed to your XGS. 🚀
+Bringing all the default configuration the Sophos team missed to your XGS – aka config-tanking it. 🚀
 
 ### Ensure the cookiecutter (this repository) is compatible with the major release version of your XGS firewall 🚨
 
@@ -37,7 +38,8 @@ Bringing all the default configuration the Sophos team missed to your XGS. 🚀
 
 ---
 
-Running the script manually after generation is easy.
+The scripts prompts whether it should run automatically after cookiecutter template-generation. 
+Should you choose *No*, running the script manually afterward is easy.
 
 1. Navigate to the cookiecutter-generated directory (`xgs-tanker-api`)
 2. Open a shell (`cmd`/`bash`) in the directory
