@@ -650,7 +650,7 @@
 </ServiceGroup>
 <ServiceGroup transactionid="servicegroup-unifi">
   <Name>UniFi Infrastruktur</Name>
-  <Description>Kommunikation APs mit Controller, Zugriff Management-Interface + Captive Portal</Description>
+  <Description>Communication APs with Controller, access management interface + Captive Portal</Description>
   <ServiceList>
     <Service>DNS</Service>
     <Service>HTTPS</Service>
@@ -666,7 +666,7 @@
 </ServiceGroup>
 <ServiceGroup transactionid="servicegroup-printing">
   <Name>Network Printing</Name>
-  <Description>0815 Ports für Drucker-Kommunikation (kein Windows-Printing)</Description>
+  <Description>0815 Ports für printer communication (no Windows-Printing)</Description>
   <ServiceList>
     <Service>PING</Service>
     <Service>SNMP</Service>
@@ -680,7 +680,7 @@
 </ServiceGroup>
 <ServiceGroup transactionid="servicegroup-emails">
   <Name>Email Messaging</Name>
-  <Description>Standardports E-Mail-Versand/-Empfang (Legacy)</Description>
+  <Description>Default ports E-Mail receiving/sending (Legacy)</Description>
   <ServiceList>
     <Service>IMAP</Service>
     <Service>POP3</Service>
@@ -692,8 +692,8 @@
   </ServiceList>
 </ServiceGroup>
 <ServiceGroup transactionid="servicegroup-adds">
-  <Name>Active Directory (kein DNS)</Name>
-  <Description>Basisdienste Active Directory (DNS muss explizit hinzugefügt werden)</Description>
+  <Name>Active Directory (no DNS)</Name>
+  <Description>Base Active Directory services (DNS has to be added explicitly)</Description>
   <ServiceList>
     <Service>LDAP</Service>
     <Service>NTP</Service>
@@ -707,7 +707,7 @@
 </ServiceGroup>
 <ServiceGroup transactionid="servicegroup-smb">
   <Name>SMB Kommunikation</Name>
-  <Description>SMB / CIFS + NETBIOS Kommunikation</Description>
+  <Description>SMB / CIFS + NETBIOS communication</Description>
   <ServiceList>
     <Service>SMB / CIFS</Service>
     <Service>NETBIOS</Service>

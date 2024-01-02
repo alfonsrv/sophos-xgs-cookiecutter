@@ -1,6 +1,6 @@
 <FirewallRuleGroup transactionid="firewall-group-management">
   <Name>Management</Name>
-  <Description>Hypervisor und Management Services – zur grundsätzlichen Sicherstellung der Infrastruktur-Funktionalität. Zugriff innerhalb geschützter Netzwerke.</Description>
+  <Description>Hypervisor and Management Services – to ensure general infrastructure functionality. Access from or to secured network segmente.</Description>
   <SecurityPolicyList>
     <SecurityPolicy>Management Network</SecurityPolicy>
     <SecurityPolicy>Management SMTP</SecurityPolicy>
@@ -13,7 +13,7 @@
 
 <FirewallRuleGroup transactionid="firewall-group-infrastructure">
   <Name>Infrastructure</Name>
-  <Description>Allgemeine Kommunikation der Infrastruktur zur Bereitstellung der internen Services, wie Domain Controller, Dateiserver, Drucken, ...</Description>
+  <Description>General communication of the infrastructure to access internal services, like domain controllers, file servers, printing, ...</Description>
   <SecurityPolicyList>
     <SecurityPolicy>DC Comms</SecurityPolicy>
     <SecurityPolicy>Printserver Client Comms</SecurityPolicy>
@@ -36,7 +36,7 @@
 
 <FirewallRuleGroup transactionid="firewall-group-dmz">
   <Name>Incoming + DMZ</Name>
-  <Description>Extern eingehender Verkehr gegenüber internen Diensten, wie DMZ-Servern, Telefonanlagen, ...</Description>
+  <Description>External incoming traffic towards internal services, DMZ servers, telephony, ..</Description>
   <SecurityPolicyList>
     <!--SecurityPolicy>[example] Traffic to DMZ</SecurityPolicy-->
   </SecurityPolicyList>

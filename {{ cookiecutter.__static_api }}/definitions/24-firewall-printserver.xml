@@ -1,6 +1,6 @@
 <FirewallRule transactionid="firewall-printserver-clients">
   <Name>Printserver Client Comms</Name>
-  <Description>Clients zu Druckserver-Kommunikation</Description>
+  <Description>Clients to printserver communications</Description>
   <IPFamily>IPv4</IPFamily>
   <Status>Enable</Status>
   <Position>After</Position>
@@ -56,7 +56,7 @@
 
 <FirewallRule transactionid="firewall-printserver-printer">
   <Name>Printserver Printer Comms</Name>
-  <Description>Druckserver zu Drucker-Kommunikation</Description>
+  <Description>Printserver to printers communication</Description>
   <IPFamily>IPv4</IPFamily>
   <Status>Enable</Status>
   <Position>After</Position>
@@ -106,7 +106,7 @@
 
 <FirewallRule transactionid="firewall-printserver-vpn">
   <Name>Printserver VPN Comms</Name>
-  <Description>Clients via VPN zu Druckserver-Kommunikation</Description>
+  <Description>Clients via VPN to printserver communication</Description>
   <IPFamily>IPv4</IPFamily>
   <Status>Enable</Status>
   <Position>After</Position>

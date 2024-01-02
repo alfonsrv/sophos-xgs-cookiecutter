@@ -1,6 +1,6 @@
 <FirewallRule transactionid="firewall-management-network">
   <Name>Management Network</Name>
-  <Description>Hypervisor / Management-Netzwerk Zugriff auf Server-Komponenten für Backup und Verwaltung</Description>
+  <Description>Hypervisor / Management network access server components for backups and management</Description>
   <IPFamily>IPv4</IPFamily>
   <Status>Disable</Status>
   <Position>Top</Position>

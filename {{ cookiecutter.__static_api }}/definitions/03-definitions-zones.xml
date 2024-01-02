@@ -101,7 +101,7 @@
 <Zone transactionid="zone-voip">
   <Name>VoIP</Name>
   <Type>LAN</Type>
-  <Description>VoIP, Telefonie + DECT</Description>
+  <Description>VoIP, Phone + DECT</Description>
   <ApplianceAccess>
     <NetworkServices>
       <DNS>Enable</DNS>
