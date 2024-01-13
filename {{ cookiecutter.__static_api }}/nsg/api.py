@@ -64,6 +64,7 @@ class SophosAPI:
         try:
             response = requests.post(
                 self.api_url,
+                headers={'User-Agent': 'RAUSYS XGS Tanker - www.rausys.de'},
                 data=data,
                 verify=False,
                 timeout=420

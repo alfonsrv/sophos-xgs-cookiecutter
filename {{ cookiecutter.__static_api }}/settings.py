@@ -13,6 +13,8 @@
 #  commercial entities and Rau Systemberatung GmbH, releasing the former from
 #  the License obligations.
 
+VERSION = '20.0a'
+
 XGS_IP_ADDRESS = '{{ cookiecutter.xgs_tanker_ip }}'
 XGS_PORT = '{{ cookiecutter.__xgs_tanker_port }}'
 XGS_USER = '{{ cookiecutter.xgs_tanker_user }}'

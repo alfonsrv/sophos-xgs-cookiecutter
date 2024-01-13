@@ -3,6 +3,9 @@
   <Type>LAN</Type>
   <Description>DO NOT USE</Description>
   <ApplianceAccess>
+    <AdminServices>
+      <HTTPS>Enable</HTTPS>
+    </AdminServices>
     <NetworkServices>
       <DNS>Enable</DNS>
       <Ping>Enable</Ping>

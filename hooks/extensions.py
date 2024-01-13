@@ -16,6 +16,7 @@ def domain_component(value):
 
 @simple_filter
 def netbios(value):
+    if len(value.split('.')) == 1: return value
     return value.split('.')[:1][0]
 
 

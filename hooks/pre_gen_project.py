@@ -29,11 +29,12 @@ def is_domain(value: str) -> bool:
 def legal_domain(value: str) -> bool:
     if 'kunde.de' in value: return False
     if 'rausys.de' in value: return False
+    if 'contoso.com' in value: return False
     return True
 
 
 for _d in [HOSTNAME, DOMAIN]:
-    if not is_domain(_d) or not legal_domain(_d):
+    if not is_domain(_d) or not legal_domain(_d.lower()):
         print(f'ERROR: "{_d}" is not a valid hostname!')
         sys.exit(1)
 

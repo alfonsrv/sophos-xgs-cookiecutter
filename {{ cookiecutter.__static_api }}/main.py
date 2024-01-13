@@ -15,9 +15,7 @@
 
 import os
 import logging
-from time import sleep
 
-from rich.console import Console
 from rich.live import Live
 from rich import box
 
@@ -74,7 +72,7 @@ def process_definitions(*, api: SophosAPI):
             path = os.path.join(os.getcwd(), settings.DEFINITIONS_PATH, file)
             if not has_content(path): continue
             logger.info(f'[{i+1}/{len(files)}] Processing {file}')
-            table.add_row(f'🛳 "{file}"', '')
+            table.add_row(f'🛳  "{file}"', '')
 
             response = api.process_file(file_path=path)
             _process_results(table=table, results=response)
@@ -93,7 +91,7 @@ if __name__ == '__main__':
                www.rausys.de
 
     """)
-    logger.info(f'Starting up XGS Tanker Script (IP addr {settings.XGS_IP_ADDRESS}:{settings.XGS_PORT})')
+    logger.info(f'Starting up XGS Tanker Script (IP addr {settings.XGS_IP_ADDRESS}:{settings.XGS_PORT}), v{settings.VERSION}')
     api = SophosAPI(
         ip_address=settings.XGS_IP_ADDRESS,
         port=settings.XGS_PORT,

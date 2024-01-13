@@ -706,7 +706,7 @@
   </ServiceList>
 </ServiceGroup>
 <ServiceGroup transactionid="servicegroup-smb">
-  <Name>SMB Kommunikation</Name>
+  <Name>SMB Communication</Name>
   <Description>SMB / CIFS + NETBIOS communication</Description>
   <ServiceList>
     <Service>SMB / CIFS</Service>
@@ -714,7 +714,7 @@
   </ServiceList>
 </ServiceGroup>
 <ServiceGroup transactionid="servicegroup-management">
-  <Name>Management</Name>
+  <Name>Management Ports</Name>
   <Description>RAUSYS Management Ports</Description>
   <ServiceList>
     <Service>HTTP</Service>

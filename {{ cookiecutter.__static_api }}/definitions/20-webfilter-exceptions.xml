@@ -147,7 +147,7 @@
   <VirusScan>on</VirusScan>
   <ZeroDayProtection>on</ZeroDayProtection>
   <PolicyCheck>on</PolicyCheck>
-  <EnableSrcIP>yes</EnableSrcIP>
+  <EnableSrcIP>no</EnableSrcIP>
   <EnableDstIP>no</EnableDstIP>
   <EnableURLRegex>yes</EnableURLRegex>
   <EnableWebCat>no</EnableWebCat>

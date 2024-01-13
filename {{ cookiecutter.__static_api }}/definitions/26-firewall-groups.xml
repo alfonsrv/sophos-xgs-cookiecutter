@@ -3,7 +3,6 @@
   <Description>Hypervisor and Management Services – to ensure general infrastructure functionality. Access from or to secured network segmente.</Description>
   <SecurityPolicyList>
     <SecurityPolicy>Management Network</SecurityPolicy>
-    <SecurityPolicy>Management SMTP</SecurityPolicy>
   </SecurityPolicyList>
   <SourceZones>
     <Zone>Management</Zone>

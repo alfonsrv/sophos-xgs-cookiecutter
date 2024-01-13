@@ -12,6 +12,7 @@ Bringing all the default configuration the Sophos team missed to your XGS – ak
 
 ### Ensure the cookiecutter (this repository) is compatible with the major release version of your XGS firewall 🚨
 
+![CLI Preview](.docs/xgs-tanker.gif)
 
 ## Features ⭐️
   
@@ -99,6 +100,7 @@ Reference what the XGS tanker script configures:
 | `08-definitions-dns`              | Cloudflare + Google DNS and XGS forward lookup configuration                                                                             |
 | `09-definitions-client-dynamic`   | Customer-specific configuration (AD DS auth server, domain controller, DNS request route)                                                |
 | `12-admin-management`             | Firewall ACL skips via Management port + RAUSYS WAN                                                                                      |
+| `13-intrusion-prevention`         | Enable Intrusion Prevention Basics + better packets default values, while keeping flood detection disabled                               |
 | `15-ntp-service`                  | NTP service for clients to simulate SG functionality (NAT, Firewall Policy, IPS policy)                                                  |
 | `16-definitions-expurgate`        | eXpurgate networks definitions                                                                                                           |
 | `17-definitions-exchange`         | Microsoft Exchange networks definitions                                                                                                  |
@@ -111,10 +113,9 @@ Reference what the XGS tanker script configures:
 | `24-firewall-printserver`         | Firewall Policy for print server communications (client to server + server to printers)                                                  |
 | `25-firewall-surfing`             | Firewall Policy for webfilter configuration (defined in `21-webfilter-policy`)                                                           |
 | `26-firewall-groups`              | Assign Firewall Policies to groups                                                                                                       |
-| `30-intrusion-prevention`         | Enable Intrusion Prevention Basics + better packets default values, while keeping flood detection disabled                               |
 | `90-interfaces`                   | Interface WAN Failover + lag1 Active-Backup configuration for LAN                                                                        |
 | `91-dhcp-server`                  | DHCP server configuration or DHCP relay to Domain Controllers for VLAN1                                                                  |
-| `99-backup-now`                    | Create instant backup via previously configured e-mail                                                                                   |
+| `99-backup-now`                   | Create instant backup via previously configured e-mail                                                                                   |
 
 
 ## Limitations
