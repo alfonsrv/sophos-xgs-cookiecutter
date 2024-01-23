@@ -1,0 +1,36 @@
+<VPNProfile transactionid="rras-vpn-profile">
+  <Name>Azure_RRAS</Name>
+  <Description>Windows Server Routing and RAS IPsec profile - also used to connect to Microsoft Azure</Description>
+  <KeyingMethod>Automatic</KeyingMethod>
+  <AllowReKeying>Enable</AllowReKeying>
+  <KeyNegotiationTries>0</KeyNegotiationTries>
+  <AuthenticationMode>MainMode</AuthenticationMode>
+  <PassDataInCompressedFormat>Disable</PassDataInCompressedFormat>
+  <Phase1>
+    <EncryptionAlgorithm1>AES256</EncryptionAlgorithm1>
+    <AuthenticationAlgorithm1>SHA1</AuthenticationAlgorithm1>
+    <EncryptionAlgorithm2/>
+    <AuthenticationAlgorithm2/>
+    <EncryptionAlgorithm3/>
+    <AuthenticationAlgorithm3/>
+    <SupportedDHGroups>
+      <DHGroup>20(ecp384)</DHGroup>
+    </SupportedDHGroups>
+    <KeyLife>10800</KeyLife>
+    <ReKeyMargin>360</ReKeyMargin>
+    <RandomizeRe-KeyingMarginBy>50</RandomizeRe-KeyingMarginBy>
+    <DeadPeerDetection>Disable</DeadPeerDetection>
+  </Phase1>
+  <Phase2>
+    <EncryptionAlgorithm1>AES256</EncryptionAlgorithm1>
+    <AuthenticationAlgorithm1>SHA1</AuthenticationAlgorithm1>
+    <EncryptionAlgorithm2/>
+    <AuthenticationAlgorithm2/>
+    <EncryptionAlgorithm3/>
+    <AuthenticationAlgorithm3/>
+    <PFSGroup>None</PFSGroup>
+    <KeyLife>3600</KeyLife>
+  </Phase2>
+  <sha2_96_truncate>no</sha2_96_truncate>
+  <keyexchange>ikev1</keyexchange>
+</VPNProfile>

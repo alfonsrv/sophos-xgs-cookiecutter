@@ -99,6 +99,7 @@ Reference what the XGS tanker script configures:
 | `06-definitions-countries`        | "Safe Countries" in case of country-filtering requirements                                                                               |
 | `08-definitions-dns`              | Cloudflare + Google DNS and XGS forward lookup configuration                                                                             |
 | `09-definitions-client-dynamic`   | Customer-specific configuration (AD DS auth server, domain controller, DNS request route)                                                |
+| `10-definitions-vpn`              | VPN profile to connect to Microsoft Azure and Routing & RAS                                                                              |
 | `12-admin-management`             | Firewall ACL skips via Management port + RAUSYS WAN                                                                                      |
 | `13-intrusion-prevention`         | Enable Intrusion Prevention Basics + better packets default values, while keeping flood detection disabled                               |
 | `15-ntp-service`                  | NTP service for clients to simulate SG functionality (NAT, Firewall Policy, IPS policy)                                                  |
